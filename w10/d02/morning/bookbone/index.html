@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Bookbone</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Alegreya:700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans|Dosis:400,800" rel="stylesheet" type="text/css" />
+
+    <!-- ************ Libraries ************ -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- ************ Templates ************ -->
+    <script type='text/template' id='book-template'>
+      <div class='book'>
+        <h3 class='title'>
+          <%- title %>
+          <button data-price=0 name='free'>Free</button>
+        </h3>
+      </div>
+    </script>
+
+    <script type='text/template' id='author-template'>
+      <div class='author'>
+        <h2 class='title'>
+          <%- name %>
+        </h2>
+        <form>
+          <p>
+            <input type='text' placeholder='book title' name='title'>
+          </p>
+        </form>
+        <ul class='books'>
+        </ul>
+      </div>
+    </script>
+
+    <!-- ************ Book ************ -->
+    <script type="text/javascript" src='javascripts/backbone/book.js'></script>
+
+    <!-- ************ Author ************ -->
+    <script type="text/javascript" src='javascripts/backbone/author.js'></script>
+
+    <!-- ************ app ************ -->
+    <script type="text/javascript" src='javascripts/app.js'></script>
+
+
+  </head>
+
+  <body>
+
+    <h1>
+      Lich Said "READ!"
+    </h1>
+
+    <form class='new-author'>
+      <input type="text" placeholder='author-name' class='author-name'>
+    </form>
+
+    <ul class='street-side-table'>
+    </ul>
+
+  </body>
+</html>

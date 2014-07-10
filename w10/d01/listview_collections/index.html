@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Chris' Juice Bar</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+
+    <!-- Libraries -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!--  Templates -->
+    <script id="ingredient-template" type="text/template">
+      name: <%- ingredient.name %>, amount: <%- ingredient.amount %>
+    </script>
+    <script id="juice-template" type="text/template">
+      name: <%- juice.name %>, ingredients: <%- juice.ingredients %>
+    </script>
+
+    <!--  Da App -->
+    <script type="text/javascript" src='javascripts/app.js'></script>
+  </head>
+
+  <body>
+
+    <ul id="juices">
+      <ul id="ingredient-list"></ul>
+    </ul>
+
+  </body>
+
+</html>

@@ -1,0 +1,27 @@
+<div class="eight columns offset-by-two">
+
+  <h1><%= @planet.name %></h1>
+
+  <img src='<%= @planet.image_url %>'
+  <br>
+
+  <ul>
+    <% @planet.moons.each do |moon| %>
+      <li><%= moon.name %></li>
+      <a class='button' href="/planets/<%= @planet.id %>/moons/<%= moon.id %>/edit">Edit Moon</a>
+    <% end %>
+  </ul>
+
+
+  <form action="/planets/<%= @planet.id %>/edit" method='get'>
+    <%= token_tag%>
+    <button class='button' type='submit'>Edit Planet</button>
+  </form>
+
+  <form action="/planets/<%= @planet.id %>" method='post'>
+    <input type="hidden" name='_method' value='delete'>
+    <%= token_tag %>
+    <button class='button' type='submit'>Delete Planet</button>
+  </form>
+
+</div>

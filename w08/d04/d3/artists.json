@@ -1,0 +1,22 @@
+[
+  {
+    "count": 3,
+    "familiarity": 0.7447347668,
+    "hotttnesss": 0.5650456592,
+    "artist_id": "AR8BUVM1187FB4D94D",
+    "names": "Belle and Sebastian",
+    "lat": 55.864237,
+    "long": -4.251806,
+    "location": "GB"
+  },
+  {
+    "count": 6,
+    "familiarity": 0.8627954137,
+    "hotttnesss": 0.6002824907,
+    "artist_id": "AR8RXRI1187FB4104B",
+    "names": "The Roots",
+    "lat": 39.95227,
+    "long": -75.16237,
+    "location": "US"
+  }
+]

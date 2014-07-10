@@ -1,0 +1,9 @@
+body {
+  background-color: lightgreen;
+}
+
+li{
+  background-color: green;
+  border-radius: 25px;
+  width: 500px;
+}

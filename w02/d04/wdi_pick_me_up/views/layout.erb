@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>PICK ME UP</title>
+    <style>
+      body { background-color: #<%= @color %>; }
+    </style>
+  </head>
+  <body>
+    <h1>Emergency WDI Pickmeup</h1>
+    <h1>Hi There!</h1>
+
+    <form action="/names" method ="post">
+      <input type="text" name="name">
+      <button type="submit">COMPLIMENTIFY</button>
+    </form>
+
+    <%= yield %>
+  </body>
+</html>

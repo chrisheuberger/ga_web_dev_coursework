@@ -1,0 +1,11 @@
+<h1>YE OLDE BOOKE PARSER!</h1>
+<h2>Welcome! Pull up a chair.</h2>
+<p>No, not that one. It's rotten. Try that one.</p>
+
+<div class='books'>
+  <% Dir['books/*'].each do |book| %>
+  <div class='book'>
+    <a href="/<%= book %>"><%= book %></a>
+  </div>
+  <% end %>
+</div>

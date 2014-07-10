@@ -1,0 +1,8 @@
+<h2>Here be the Squares</h2>
+
+<% @squares.each do |square| %>
+  <div style="background-color:<%= square.color %>; width:<%= square.side_length %>px; height:<%= square.side_length %>px; border-radius:<%= square.border_radius %>%;"></div>
+  <br>
+<% end %>
+<br>
+<%= link_to "Make a New Square", new_square_path %>

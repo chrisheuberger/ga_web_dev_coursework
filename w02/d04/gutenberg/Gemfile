@@ -1,0 +1,6 @@
+source 'https://www.rubygems.org'
+
+gem 'sinatra'
+gem 'sinatra-reloader'
+gem 'gutenberg_book_finder'
+gem 'pry'

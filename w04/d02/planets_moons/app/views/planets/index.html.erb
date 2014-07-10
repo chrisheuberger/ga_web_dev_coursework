@@ -1,0 +1,31 @@
+<div class="eight columns offset-by-two">
+
+  <h1>Planets</h1>
+
+  <ul>
+    <% @planets.each do |planet| %>
+      <li><a class="button" href='/planets/<%= planet.id %>'>
+      <i class="fa fa-circle-o3 pull-left"></i><%= planet.name %></a>
+        <ul>
+          <% planet.moons.each do |moon| %>
+            <li>
+              <a href='/planets/<%= planet.id %>'>
+                <i class="fa fa-moon-o pull-left">
+                  <%= moon.name %>
+                </i>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </li>
+    <%end%>
+  </ul>
+
+  <%= link_to "Make a New Planet", new_planet_path %>
+</div>
+
+<div class="four columns offset-by-six">
+    <i class="fa fa-circle fa-spin fa-3x">
+      <i class="fa fa-circle fa-spin fa-5x"></i>
+    </i>
+</div>

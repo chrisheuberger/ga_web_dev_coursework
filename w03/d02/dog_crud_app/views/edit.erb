@@ -1,0 +1,15 @@
+<form action="/dogs/<%= @dog.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="text" name="name" value="<%= @dog.name %>">
+  <input type="submit">
+</form>
+<form action="/dogs/<%= @dog.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="text" name="name" value="<%= @dog.age %>">
+  <input type="submit">
+</form>
+<form action="/dogs/<%= @dog.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="text" name="name" value="<%= @dog.breed %>">
+  <input type="submit">
+</form>

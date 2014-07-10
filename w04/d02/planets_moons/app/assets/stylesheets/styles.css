@@ -1,0 +1,38 @@
+
+i {
+  color: black;
+}
+
+img {
+  width: 200px;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 10px;
+}
+nav {
+  padding: 0;
+  background-color: #336666;
+  height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+  margin:0 auto;
+}
+nav a {
+  margin: 0;
+  color: white;
+}
+.fa-rocket {
+  color: white;
+}
+.fa-spin {
+  color: #77CCCC;
+  z-index: -1;
+}
+}
+.test {
+  width: 200px;
+  height:300px;
+}

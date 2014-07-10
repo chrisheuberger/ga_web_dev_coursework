@@ -1,0 +1,49 @@
+body {
+  background-color: #55bb00;
+  font-family: "Istok Web", Tahoma, sans-serif;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+h1 {
+  font-family: "Istok Web", Tahoma, sans-serif;
+  font-size: 50px;
+  color: #113300;
+}
+
+h2 {
+  font-family: "Istok Web", Tahoma, sans-serif;
+  font-size: 40px;
+  color: #FFFFFF;
+}
+
+h4 {
+  font-family: "Istok Web", Tahoma, sans-serif;
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+.form {
+  font-family: "Istok Web", Tahoma, sans-serif;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+a {
+    font-family: "Istok Web", Tahoma, sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 2em;
+    color: #113300;
+}
+
+p {
+    font-family: "Istok Web", Tahoma, sans-serif;
+    font-size: 20px;
+    line-height: 2em;
+    color: #ffffaa;
+}
+
+ul {
+  list-style-type: none;
+}

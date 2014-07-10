@@ -1,0 +1,62 @@
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h1>chat server!</h1>
+
+  <p>
+    say something: <input type="text"/>
+    <input id="sendButton" type="button" value="send"/>
+  </p>
+
+  <ul id="log">
+  </ul>
+
+  <script>
+    var socket = io('http://localhost:8000');
+
+    socket.on('connect', function() {
+      console.log("socket.io client connected");
+
+    });
+
+    socket.on('chat update', function(data) {
+      console.log('got update event', data);
+      var li = $('<li>');
+      li.text(data.text);
+      $('#log').append(li);
+    });
+
+
+    $(window).load(function() {
+      console.log("page loaded");
+    });
+
+    $('#sendButton').click(function() {
+      var input = $('input[type=text]');
+      var text = input.val();
+      console.log("text", text);
+      input.val('');
+      sendTextToServer(text);
+    });
+
+
+    function sendTextToServer(text) {
+      $.ajax({
+        method: 'POST',
+        url: '/',
+        dataType: 'json',
+        data: { 'text': text }, 
+        success: function() {
+          console.log("success");
+        },
+        error: function() {
+          console.log("error");
+        },
+      });
+    }
+  </script>
+</body>
+</html>

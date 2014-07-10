@@ -1,0 +1,17 @@
+<h1>I'M A FROG AND HERE ARE MY RIBBITS</h1>
+
+<h2><%= @user.username %></h2>
+
+<% @user.ribbits.each do |ribbit| %>
+  <p>
+    <%= ribbit.message %>
+    <form action="/users/<%= @user.id %>/ribbits/<%= ribbit.id %>" method='post'>
+      <input type="hidden" name='_method' value='delete'>
+      <button type='submit'>UN-RIBBIT</button>
+    </form>
+  </p>
+<% end %>
+
+<form action="/users/<%= @user.id %>/ribbits/new" method='get'>
+  <button type='submit'>RIBBIT</button>
+</form>

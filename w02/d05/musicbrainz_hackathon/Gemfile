@@ -1,0 +1,8 @@
+source 'http://rubygems.org'
+
+gem 'sinatra'
+gem 'sinatra-reloader'
+gem 'httparty'
+gem 'pry'
+
+gem 'musicbrainz', '0.5.2'

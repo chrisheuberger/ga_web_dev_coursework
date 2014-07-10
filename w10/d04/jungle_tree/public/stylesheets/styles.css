@@ -1,0 +1,12 @@
+body {
+  background-color: lightgreen;
+}
+
+li{
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+  background-color: green;
+  border-radius: 25px;
+  width: 500px;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PlanetsMoons</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <div class="center">
+      <i class="fa fa-rocket fa-2x"></i><br>
+      <a class='home' href='/planets'>HOME PLANET</a>
+    </div>
+  </nav>
+  <div class="container">
+    <%= yield %>
+  </div>
+</body>
+</html>

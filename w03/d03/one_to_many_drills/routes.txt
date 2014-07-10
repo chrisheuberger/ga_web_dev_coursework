@@ -1,0 +1,21 @@
+HTTP    APP
+
+get     /cows —> index                  Cows.all (show farmer owners)
+
+get     /cows/:id —> show               Cows.find (show farmer owners)
+
+get     /cows/new —> create             form (assign farmer)
+post    /cows —> create                 pull data from view / form / redirect (to show)
+
+get     /cows/:id/edit —> update        pull data from view / form
+put     /cows/:id —> update             pull data from view / UPDATE / redirect (to show)
+
+delete    /cows/:id —> delete/destroy   find / destroy
+
+- - -
+
+layout.erb
+index.erb   /cows
+new.erb     /cows/new
+show.erb    /cows/:id
+edit.erb    /cows/:id/edit

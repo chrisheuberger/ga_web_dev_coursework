@@ -1,0 +1,23 @@
+body {
+  font-family: Tahoma;
+}
+
+.card{
+  height: 10em;
+  width: 6em;
+  border: 1px solid black;
+  border-radius: .5em;
+  float: left;
+  margin: 1em;
+  padding: .2em;
+ }
+
+ .diamonds, .hearts{
+ color: red;
+ }
+
+ .bottom.right{
+  float: right;
+  position: relative;
+  bottom: -7.5em;
+ }

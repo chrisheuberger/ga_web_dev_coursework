@@ -1,0 +1,11 @@
+.hearts{
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  color: red;
+  font-size: 5em;
+}
+
+body {
+  background-color: white;
+}

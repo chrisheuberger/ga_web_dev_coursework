@@ -1,0 +1,11 @@
+<h1><%= @dog.name %></h1>
+<h1><%= @dog.age %></h1>
+<h1><%= @dog.breed %></h1>
+
+<form action="/dogs/<%= @dog.id %>" method='post'>
+  <input type="hidden" name='_method' value='delete'>
+  <button type='submit'>Delete</button>
+</form>
+<form action="/dogs" method="get">
+  <button type="submit">Show Dogs</button>
+</form>

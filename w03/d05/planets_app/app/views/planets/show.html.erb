@@ -1,0 +1,17 @@
+<div class="main">
+
+  <h1>here's your planet!</h1>
+
+  <h2><%= @planet.name %></h2>
+
+  <form action="/planets/<%= @planet.id %>/edit" method='get'>
+    <%= token_tag %>
+    <button type='submit'>edit yo planet</button>
+  </form>
+  <form action="/planets/<%= @planet.id %>" method='post'>
+    <%= token_tag %>
+    <input type="hidden" name='_method' value='delete'>
+    <button type='submit'>blow up yo planet</button>
+  </form>
+
+</div>

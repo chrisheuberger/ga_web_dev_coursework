@@ -1,0 +1,14 @@
+<div class="eight columns offset-by-two">
+
+  <h1>Change A Planet</h1>
+
+  <%= render 'form' %>
+
+  </form>
+
+  <form action="/planets/<%= @planet.id %>/moons/new" method='get'>
+    <%= token_tag%>
+    <button type='submit'>Add Moon</button>
+  </form>
+
+</div>

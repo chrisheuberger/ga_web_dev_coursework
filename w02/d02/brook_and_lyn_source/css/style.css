@@ -1,0 +1,30 @@
+body {
+  font-size: 12px;
+  line-height: 17px;
+  font-family: "Times New Roman", serif;
+  font-color: #656565;
+  margin: 20px;
+}
+
+a.hover {
+  color: #20222a;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 20px;
+  font-family: "Times New Roman", serif;
+  font-color: #656565;
+  margin: 20px 0 10px 0;
+}
+
+.container {
+     width: 940px;
+     margin: 20px auto;
+}
+
+.box {
+  display: block;
+  float: center;
+  margin: 10px;
+}

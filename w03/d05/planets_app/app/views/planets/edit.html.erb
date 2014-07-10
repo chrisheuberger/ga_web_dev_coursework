@@ -1,0 +1,57 @@
+<div class="main">
+
+  <h1>let's change a planet</h1>
+
+  <form action="/planets/<%= @planet.id %>" method='post'>
+    <input type="hidden" name="_method" value="put">
+
+    <%= token_tag %>
+    <div></div><input class='field' type="text" name='planet[name]' value='<%= @planet.name %>'>
+    <br>
+
+    <%= token_tag %>
+    <div>link:</div><input class='field' type="url" name='planet[image_url]' value='<%= @planet.image_url %>'>
+    <br>
+
+    <%= token_tag %>
+    <div></div><input class='field' type="text" name='planet[diameter]' value='<%= @planet.diameter %> miles'>
+    <br>
+
+    <%= token_tag %>
+    <div></div><input class='field' type="text" name='planet[mass]' value='<%= @planet.mass %> Kg'>
+    <br>
+    <br>
+
+    <h2>is there life?</h2>
+
+      <% if @planet.life == 'true' %>
+
+         <p>
+            <%= token_tag %>
+             <div></div><input type="radio" name="planet[life]" id="true" value="true" checked />
+            <label for="true">TRUE</label>
+            <br>
+            <%= token_tag %>
+            <div></div><input type="radio" name="planet[life]" id="false" value="false" />
+            <label for="false">FALSE</label>
+          </p>
+
+      <% else %>
+
+         <p>
+            <%= token_tag %>
+             <div></div><input type="radio" name="planet[life]" id="true" value="true" />
+            <label for="true">TRUE</label>
+            <br>
+            <%= token_tag %>
+            <div></div><input type="radio" name="planet[life]" id="false" value="false" checked/>
+            <label for="false">FALSE</label>
+          </p>
+
+      <% end %>
+
+    <div></div><input type="submit">
+
+  </form>
+
+</div>

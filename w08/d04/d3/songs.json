@@ -1,0 +1,22 @@
+[
+  {
+    "song_id": "SOBWVGX12AB017BD87",
+    "song_title": "Like Dylan In The Movies",
+    "artist_id": "AR8BUVM1187FB4D94D",
+    "album_id": 569858,
+    "duration": 250.69669,
+    "hotttnesss": null,
+    "loudness": -10.504,
+    "year": "1996"
+  },
+  {
+    "song_id": "SOJHRLU12A6701EB67",
+    "song_title": "One Shine",
+    "artist_id": "AR8RXRI1187FB4104B",
+    "album_id": 15646,
+    "duration": 340.40118,
+    "hotttnesss": 0.583401231,
+    "loudness": -10.345,
+    "year": null
+  }
+]

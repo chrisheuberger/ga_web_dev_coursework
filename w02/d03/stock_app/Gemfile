@@ -1,0 +1,9 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+
+gem 'sinatra-reloader'
+
+gem 'pry'
+
+gem 'yahoo-finance', require: 'yahoo_finance'

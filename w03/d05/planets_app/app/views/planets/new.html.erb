@@ -1,0 +1,40 @@
+<div class="main">
+
+  <h1>let's make a new planet</h1>
+
+  <form action="/planets" method='post'>
+
+    <%= token_tag %>
+    <input class='field' type="text" name='planet[name]' placeholder='planet name'>
+    <br>
+
+    <%= token_tag %>
+    <input class='field' type="url" name='planet[image_url]' placeholder='link to image'>
+    <br>
+
+    <%= token_tag %>
+    <input class='field' type="text" name='planet[diameter]' placeholder='diameter (miles)'>
+    <br>
+
+    <%= token_tag %>
+    <input class='field' type="text" name='planet[mass]' placeholder='mass (kg)'>
+    <br>
+    <br>
+
+    <h2>is there life?</h2>
+
+      <p>
+        <%= token_tag %>
+        <input type="radio" name="planet[life]" id="true" value="true" />
+        <label for="true">TRUE</label>
+        <br>
+        <%= token_tag %>
+        <input type="radio" name="planet[life]" id="false" value="false" />
+        <label for="false">FALSE</label>
+      </p>
+
+    <input type="submit">
+
+  </form>
+
+</div>

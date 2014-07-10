@@ -1,0 +1,20 @@
+.quote{
+  border-radius: .25em;
+  margin: 1em;
+  display: inline-block;
+}
+
+.quote .text{
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2em;
+  color: mediumvioletred;
+}
+
+.quote .attribution{
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  text-align: right;
+  color: teal;
+}

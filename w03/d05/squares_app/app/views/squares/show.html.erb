@@ -1,0 +1,18 @@
+<a href="/squares">
+  HOME
+</a>
+<br>
+<br>
+<div style="background-color:<%= @square.color %>; width:<%= @square.side_length %>px; height:<%= @square.side_length %>px; border-radius:<%= @square.border_radius %>%;"></div>
+</div>
+<br>
+<a href="/squares/<%= @square.id %>/edit">
+  Edit
+</a>
+<br>
+<br>
+<form action="/squares/<%= @square.id %>" method='post'>
+  <%= token_tag %>
+  <input type="hidden" name='_method' value='delete'>
+  <button type='submit'>No Nore Square</button>
+</form>

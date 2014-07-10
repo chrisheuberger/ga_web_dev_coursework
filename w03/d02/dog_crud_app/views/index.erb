@@ -1,0 +1,51 @@
+
+<h1>ALL OF THE DOGS</h1>
+
+<form action="/dogs/new" method="get">
+  <button class="top">
+  ADD A DOG
+  </button>
+</form>
+
+<table class="chart">
+  <thead>
+    <tr>
+      <th>NAME</th>
+      <th>AGE</th>
+      <th>BREED</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dogs.each do |dog| %>
+      <tr>
+
+        <td><%= dog.name %></td>
+        <td><%= dog.age %></td>
+        <td><%= dog.breed %></td>
+
+        <td>
+          <form action="/dogs/<%= dog.id %>" method="get">
+            <button type="submit">SHOW</button>
+          </form>
+        </td>
+
+        <td>
+          <form action="/dogs/<%= dog.id %>/edit" method="get">
+            <button type="submit">EDIT</button>
+          </form>
+
+        </td>
+
+        <td>
+          <form action="/dogs/<%= dog.id %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <button type="submit">RELEASE</button>
+          </form>
+        </td>
+
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+

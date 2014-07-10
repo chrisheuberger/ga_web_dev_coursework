@@ -1,0 +1,48 @@
+1. All columns for all players from the New York Knicks (NYK)
+SELECT * FROM players WHERE team = 'NYK';
+
+2.All columns for all players from the Indiana Pacers (IND) who are under 26 years old
+SELECT * FROM players WHERE age < 26 AND team = 'IND';
+
+3. All columns for all players, ordered from least points scored to most points scored
+SELECT * FROM players ORDER BY points ASC;
+
+4. Name and Points per game (points/games), for the players with the top 20 points per game
+SELECT name, points/games FROM players ORDER BY points/games DESC LIMIT 20;
+
+5. The average age for all players
+SELECT AVG(age) FROM players;
+
+6. The average age for all players on the Oklahoma City Thunder (OKC)
+SELECT AVG(age) FROM players WHERE team = 'OKC';
+
+7. The average age for all players who played more than 40 games
+SELECT AVG(age) FROM players WHERE games > 40;
+
+8. The team and total points scored from all players on that
+   team (team points), ordered from most team points to least
+SELECT players.team, SUM(players.points) FROM players GROUP BY players.team;
+
+GROUP BY:
+
+1. top 20 group count of books by author_id, order by count descending
+SELECT authors.id, count(books.*) FROM books
+INNER JOIN authors ON authors.id = books.author_id
+GROUP BY authors.id
+ORDER BY count(books.*)
+DESC
+LIMIT 20;
+
+2. number of authors grouped by first letter of name
+SELECT LEFT(name, 1) AS first_letter,
+COUNT(*) AS total
+FROM authors
+GROUP BY first_letter;
+
+3. top 20 authors grouped by book count in descending order
+SELECT authors.name, count(books.*) FROM books
+INNER JOIN authors ON authors.id = books.author_id
+GROUP BY authors.id
+ORDER BY count(books.*)
+DESC
+LIMIT 20;

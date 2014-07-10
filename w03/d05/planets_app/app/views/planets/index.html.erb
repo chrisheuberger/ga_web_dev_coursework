@@ -1,0 +1,19 @@
+<div class="main">
+
+  <h1>here are all the planets</h1>
+
+  <ul>
+    <% @planets.each do |planet| %>
+      <li>
+        <a href="/planets/<%= planet.id %>">
+          <%= planet.name %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+
+  <a href="/planets/new">
+    make a new planet
+  </a>
+
+</div>

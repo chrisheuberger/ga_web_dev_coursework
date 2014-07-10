@@ -1,0 +1,55 @@
+.cover {
+  z-index: -999;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+h1 {
+   font: bold 50px Helvetica, Sans-Serif;
+   letter-spacing: 2px;
+   margin-bottom: 0;
+   text-align: center;
+}
+
+td {
+  font: 20px Helvetica, Sans-Serif;
+  padding: 10px;
+}
+
+th {
+  font: bold 20px Helvetica, Sans-Serif;
+  padding: 10px;
+}
+
+button {
+  font: 10px Helvetica, Sans-Serif;
+  padding: 5px;
+  margin: 20px auto;
+  display: block;
+}
+
+button.top {
+  font: 20px Helvetica, Sans-Serif;
+  padding: 5px;
+  margin: 20px auto;
+  display: block;
+}
+
+.chart {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.wrapper {
+  width: 750px;
+  height: 500px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-color: rgba(255,255,255,0.75);
+}

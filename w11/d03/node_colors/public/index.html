@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Node Colors</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+  <p>
+    <input id="color-input" type="text">
+    <input id="submit" type="submit">
+  </p>
+  <script>
+    Array.prototype.sample = function(){
+      var idx = Math.floor(Math.random() * this.length);
+      return this[idx];
+    }
+
+    function postColor(){
+      var color = $('#color-input').val();
+      $.ajax({
+        url: '/colors',
+        method: 'post',
+        dataType: 'json',
+        data: {color: color},
+        success: function(data){
+          console.log(data);
+        }
+      })
+    }
+    function getColors(){
+      $.ajax({
+        url: '/colors',
+        method: 'get',
+        dataType: 'json',
+        success: function(data){
+          setColor(data);
+        }
+      })
+    }
+    function setColor(array){
+      var color = array.sample();
+      $('body').css('background-color', color);
+    }
+
+    $(function(){
+      $('#submit').click(function(){
+        postColor();
+      });
+      setInterval(getColors, 1000);
+
+    })
+  </script>
+</body>
+</html>

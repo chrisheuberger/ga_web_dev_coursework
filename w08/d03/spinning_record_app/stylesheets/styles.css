@@ -1,0 +1,46 @@
+
+body{
+  background: url('../images/bo_play_pattern.png');
+  height: 100em;
+}
+
+h1{
+  color: white;
+  font-family: 'Lobster', cursive;
+  height: 2em;
+}
+
+.record{
+  border: 1px solid grey;
+  width: 22em;
+  height: 22em;
+  border-radius: 50%;
+  background: url('../images/congruent_outline.png');
+  overflow: hidden;
+}
+
+.record-label{
+  text-align: center;
+  padding: 2em;
+  left: 6em;
+  top: 6em;
+  position: relative;
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.record-hole{
+  left: 2em;
+  top: 1em;
+  position: relative;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.title{
+  left: 75%;
+}

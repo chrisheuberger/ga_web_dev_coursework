@@ -1,0 +1,40 @@
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    line-height: 46px;
+    font-size: 46px;
+    margin: 0 0 23px 0;
+    color: #ff6666;
+    }
+
+h2 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    line-height: 46px;
+    font-size: 46px;
+    margin: 0 0 23px 0;
+    color: #ff6666;
+    }
+
+p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    color: #ff5566;
+    }
+
+a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    text-decoration: none;
+    color: #ff5566;
+    }
+
+body {
+    background-color: #ff3344;
+}

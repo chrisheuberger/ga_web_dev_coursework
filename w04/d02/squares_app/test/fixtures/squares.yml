@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  side_length: 1
+  border_radius: 1
+  color: MyString
+
+two:
+  side_length: 1
+  border_radius: 1
+  color: MyString

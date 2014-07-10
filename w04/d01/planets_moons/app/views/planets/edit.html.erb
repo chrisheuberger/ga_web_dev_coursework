@@ -1,0 +1,52 @@
+<h1>Change A Planet</h1>
+
+  <form action="/planets/<%= @planet.id %>" method='post'>
+    <input type="hidden" name="_method" value="put">
+
+    <%= token_tag %>
+    <input class='field' type="text" name='planet[name]' value='<%= @planet.name %>'>
+    <br>
+
+    <input class='field' type="url" name='planet[image_url]' value='<%= @planet.image_url %>'>
+    <br>
+
+    <input class='field' type="text" name='planet[diameter]' value='<%= @planet.diameter %> miles'>
+    <br>
+
+    <input class='field' type="text" name='planet[mass]' value='<%= @planet.mass %> Kg'>
+    <br>
+
+    <h2>Life?</h2>
+
+      <% if @planet.life == 'true' %>
+
+         <p>
+            <input type="radio" name="planet[life]" id="true" value="true" checked />
+              <label for="true">TRUE</label>
+            <br>
+            <input type="radio" name="planet[life]" id="false" value="false" />
+              <label for="false">FALSE</label>
+          </p>
+
+      <% else %>
+
+         <p>
+            <input type="radio" name="planet[life]" id="true" value="true" />
+              <label for="true">TRUE</label>
+            <br>
+            <input type="radio" name="planet[life]" id="false" value="false" checked/>
+              <label for="false">FALSE</label>
+          </p>
+
+      <% end %>
+
+    <input type="submit">
+
+    <br>
+
+    <form action="/planets/<%= @planet.id %>/moons/new" method='get'>
+      <%= token_tag%>
+      <button type='submit'>Add Moon</button>
+    </form>
+
+  </form>

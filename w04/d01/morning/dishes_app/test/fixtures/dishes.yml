@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prep_time: 1
+  cost: 1
+  celebrity_chef_id: 
+  PRIMARY: MyString
+  KEY: MyString
+
+two:
+  prep_time: 1
+  cost: 1
+  celebrity_chef_id: 
+  PRIMARY: MyString
+  KEY: MyString

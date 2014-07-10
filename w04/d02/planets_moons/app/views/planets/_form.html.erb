@@ -1,0 +1,15 @@
+<%= form_for @planet do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+  <%= f.label :diameter %>
+  <%= f.text_field :diameter %>
+  <%= f.label :mass %>
+  <%= f.text_field :mass %>
+  <%= radio_button_tag(:life, "true") %>
+  <%= label_tag(:life_true, "There is life.") %>
+  <%= radio_button_tag(:life, "false") %>
+  <%= label_tag(:life_false, "There is no life.") %>
+  <%= f.submit %>
+<% end %>

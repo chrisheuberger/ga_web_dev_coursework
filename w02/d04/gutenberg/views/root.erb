@@ -1,0 +1,16 @@
+<h1>Ye Olde Booke Parser!</h1>
+<h2>Welcome</h2>
+<p>Here we go...</p>
+
+<div class ='books'>
+  <% Dir['books/*'].each do |book| %>
+  <div class ='book'>
+    <a href="/<%= book %>"><%= book %></a>
+  </div>
+  <% end %>
+</div>
+
+<!-- <form action="/random" method="get">
+  <input type="submit" value="Fetch!" />
+</form>
+ -->
