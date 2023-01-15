@@ -1,0 +1,19 @@
+
+<h2>MTA</h2>
+
+
+<div class='lines'>
+  <% @lines.each do |line| %>
+    <div class='line' data-name='<%= line.name %>' data-color='<%= line.color %>'>
+      <h3 class='line-name'>
+        <%= line.name %>
+      </h3>
+    </div>
+  <% end %>
+</div>
+
+<div class='stations'>
+  <ul class='stations-list'>
+  </ul>
+</div>
+

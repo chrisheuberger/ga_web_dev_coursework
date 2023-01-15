@@ -1,0 +1,8 @@
+body {
+  background-color: lightgreen;
+}
+
+li{
+  background-color: lightyellow;
+  border-radius: 25%;
+}

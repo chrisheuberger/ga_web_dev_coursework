@@ -1,0 +1,7 @@
+body {
+  background: url('../images/congruent_pentagon.png');
+}
+
+.shape{
+  float: left;
+}

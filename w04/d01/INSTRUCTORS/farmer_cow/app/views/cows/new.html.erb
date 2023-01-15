@@ -1,0 +1,5 @@
+<form action="/farmers/<%= @farmer.id %>/cows" method='post'>
+  <%= token_tag %>
+  <input type="text" name='cow[name]'>
+  <input type="submit">
+</form>

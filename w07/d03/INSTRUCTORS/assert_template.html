@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assert Template</title>
+  <script>
+    function assert(bool, desc){
+      var text = document.createTextNode(desc);
+      var li   = document.createElement('li');
+      li.appendChild(text);
+      li.className = bool ? "pass" : "fail";
+      var results = document.getElementById('results');
+      results.appendChild(li);
+    }
+  </script>
+  <style>
+    body {font-family: Courier new;}
+    #results li.pass{color: chartreuse;}
+    #results li.fail{color: red;}
+  </style>
+</head>
+<body>
+  <ul id="results"></ul>
+</body>
+</html>

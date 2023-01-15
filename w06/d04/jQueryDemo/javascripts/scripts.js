@@ -17,11 +17,6 @@ $(function(){
     var handle = setInterval(function(){
       $('body').css('backgroundColor', randomColor())
     }, 50);
-    // var stopPlease = $('<button>');
-    // stopPlease.on('click', function(){
-    //   clearInterval(handle);
-    // })
-    // $('body').append(stopPlease);
   })
 
   $('#clear-button').on('click', function(){

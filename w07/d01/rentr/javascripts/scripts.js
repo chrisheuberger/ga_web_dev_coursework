@@ -22,9 +22,6 @@ var omdbApi = {
   }
 }
 
-// omdbApi.search('star wars', function(data){console.log(data)})
-// omdbApi.search('star wars')
-
 var inputManager = {
   takeTextInput: function(textCssSelector){
     var userInput = $(textCssSelector);
@@ -41,7 +38,6 @@ function updatePoster(movieData){
 function displaySearchResults(data){
   var movieArray = data.Search;
   $('.search-results').html('');
-  // $(movieArray).each(function(idx, movie){
   for (var i = 0; i < movieArray.length; i++){
     var movieLi = $('<li>').html(movieArray[i].Title).addClass('film').data('imdbID', movieArray[i].imdbID);
 
@@ -54,11 +50,10 @@ function displaySearchResults(data){
 }
 
 $(function(){
-
+  console.log('ready');
   $('.movies').on('submit', function(e){
     e.preventDefault();
     var query = inputManager.takeTextInput('.movies .search')
     omdbApi.search(query, displaySearchResults);
   })
-
 })

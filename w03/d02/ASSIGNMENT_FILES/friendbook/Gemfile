@@ -1,0 +1,8 @@
+source "http://rubygems.org"
+
+gem 'sinatra'
+gem 'sinatra-reloader'
+gem 'pry'
+gem 'sinatra-activerecord'
+gem 'pg'
+gem 'httparty'

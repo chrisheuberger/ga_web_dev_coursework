@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Backbananas:  </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+
+    <!-- Libraries -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+      <!-- Templates -->
+      <script type='text/template' id='monkey-template'>
+        <%- name %> ... is a monkey
+        <button data-action='release'>Free</button>
+        <button data-action='edit'>Rename</button>
+      </script>
+      <script type='text/template' id='edit-monkey-template'>
+        <form>
+          <input type='text' placeholder='<%- name %>'>
+        </form>
+      </script>
+
+      <!-- Bananapp -->
+      <script type="text/javascript" src='javascripts/backbone/app.js'></script>
+
+      <!-- Models -->
+      <script type="text/javascript" src='javascripts/backbone/models/monkey.js'></script>
+
+      <!-- Collections -->
+      <script type="text/javascript" src='javascripts/backbone/collections/monkeyCollection.js'></script>
+
+      <!-- Views -->
+      <script type="text/javascript" src='javascripts/backbone/views/monkeys/monkeyView.js'></script>
+      <script type="text/javascript" src='javascripts/backbone/views/monkeys/monkeyListView.js'></script>
+
+  </head>
+  <body>
+
+  <form class='monkey-form'>
+    <input type="text" name='monkey-name'>
+  </form>
+
+  <ul class='monkeys'>
+  </ul>
+
+  </body>
+</html>

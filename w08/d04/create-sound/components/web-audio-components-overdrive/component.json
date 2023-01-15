@@ -1,0 +1,27 @@
+{
+  "name": "overdrive",
+  "repo": "web-audio-components/overdrive",
+  "description": "An overdrive distortion effect for the Web Audio API.",
+  "version": "0.0.6",
+  "author": "Nick Thompson <ncthom91@gmail.com>",
+  "twitter": "@ncthom91",
+  "keywords": [
+    "web-audio",
+    "effect",
+    "distortion",
+    "overdrive"
+  ],
+  "dependencies": {},
+  "development": {
+    "web-audio-components/rack": "*",
+    "jsantell/allen": "*",
+    "component/event": "*"
+  },
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ],
+  "web-audio": {
+    "type": "effect"
+  }
+}

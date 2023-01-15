@@ -1,0 +1,15 @@
+<!-- you can write forms this way. -->
+<h1>FORM HELPERS (BORING)</h1>
+<%= form_tag("/squares", method: "post") do %>
+  <%= label_tag("square[color]", "Color:") %>
+  <%= color_field(:square, :color) %>
+  <%= label_tag("square[border_radius]", "Border Radius:") %>
+  <%= text_field_tag("square[border_radius]") %>
+  <%= label_tag("square[side_length]", "Side Length:") %>
+  <%= text_field_tag("square[side_length]") %>
+  <%= submit_tag("Create Square") %>
+<% end %>
+
+<!-- form_for is better when we are dealing with a model. -->
+<h1>FORM HELPERS (UTTERLY RIVETING)</h1>
+<%= render 'form' %>

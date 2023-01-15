@@ -1,0 +1,17 @@
+body {
+  background-color: red;
+}
+
+div {
+  width: 32%;
+  height: 500px;
+  border: 1px dashed pink;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}

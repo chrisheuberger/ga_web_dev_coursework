@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Matt's Juice Bar</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+
+    <!-- Libraries -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- Templates -->
+    <script type="text/template" id="ingredient-template">
+      ingredient: <%- ingredient.name %>, amount: <%- ingredient.amount %>
+      <button class="delete-button">Delete</button>
+    </script>
+
+    <script type="text/template" id="juice-template">
+      <h2> Juice Name: <%- juice.name %></h2>
+      <button name="forget-button">Forget</button>
+      <form>
+        <input type='text' placeholder='ingredient-name' class='ingredient'></input>
+        <input type='text' placeholder='ingredient-amount' class='ingredient-amount'></input>
+        <input type='submit'></input>
+      </form>
+      <ul class='juice-ingredients'></ul>
+    </script>
+
+    <!--  Da App -->
+    <script type="text/javascript" src='javascripts/app.js'></script>
+
+  </head>
+  <body>
+
+    <form class='new-juice' >
+      <input type="text" placeholder='juice name' class='juice-name'>
+    </form>
+
+    <ul id="juice-list"></ul>
+  </body>
+
+</html>

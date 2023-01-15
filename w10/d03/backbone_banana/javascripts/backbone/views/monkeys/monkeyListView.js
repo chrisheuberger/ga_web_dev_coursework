@@ -4,7 +4,7 @@ Bananapp.Views.MonkeyListView = Backbone.View.extend({
   initialize: function(){
     this.listenTo(this.collection, 'all', this.render)
   },
-  // tagName: 'ul',
+  tagName: 'ul',
   render: function(){
     var that = this;
     this.$el.empty();

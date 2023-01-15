@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookbone App</title>
+
+  <link rel="stylesheet" href="stylesheets/styles.css">
+
+  <script src="javascripts/libraries/jquery.js"></script>
+  <script src="javascripts/libraries/underscore.js"></script>
+  <script src="javascripts/libraries/backbone.js"></script>
+
+  <script type="text/template" id="author-template">
+    <h2>
+    <%- name %>
+    <button name="free-button" >Free</button>
+    </h2>
+  </script>
+
+  <script type="text/template" id="book-template">
+    <h3 class="book">
+    <%- title %>
+    </h3>
+  </script>
+
+  <script src="javascripts/app.js"></script>
+
+</head>
+<body>
+
+  <form class="add-author-form">
+    Author Name: <input type="text"> <input type="submit" value="Add Author">
+  </form>
+
+  <ul class="street-side-table"></ul>
+
+</body>
+</html>

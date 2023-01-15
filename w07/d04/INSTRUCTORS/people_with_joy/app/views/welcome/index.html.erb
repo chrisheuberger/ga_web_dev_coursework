@@ -1,0 +1,82 @@
+
+<h2>Wlcom Poplr</h2>
+<p>
+  _█_ <br/>
+  (ಠ_ಠ)
+</p>
+<br/>
+
+
+
+
+<!-- THE PART THAT MATTERS -->
+
+<div class='people-manager'>
+  <ul class='people'>
+  </ul>
+
+  <form class='name-form'>
+    <input type="text" name='name'>
+    <input type="submit">
+  </form>
+</div>
+
+<!-- /THE PART THAT MATTERS -->
+
+
+
+
+
+
+<h4>Submit a name... to start the adventure!</h4>
+
+<p>
+  Let's say the text field has 'Lichard'.  What happens when you click `Sign Up`?
+  <ol>
+    <h3>********* JAVASCRIPT *********</h3>
+    <li>SUBMIT event fired! (be sure to prevent that default form behavior)</li>
+    <li>The name text is obtained, i.e. 'Lichard'</li>
+    <li>
+      An ajax request is SENT! (POST to /people)
+      <ul>
+        <li>At this point Lichard is just a name...</li>
+        <li>The name 'Lichard' is being sent along for the ride</li>
+        <li>It will end up in params on the rails side</li>
+      </ul>
+    </li>
+    <h3>********* RAILS *********</h3>
+    <li>Routes... Controller... Action</li>
+    <li>In the create action, params contains 'Lichard'</li>
+    <li>
+      A new Person object is created
+      <ul>
+        <li>That means a Person entry in the database</li>
+      </ul>
+    </li>
+    <li>Since the resquest asked for json... we render that person model as json</li>
+    <li>That json is placed in the response</li>
+    <h3>********* JAVASCRIPT *********</h3>
+    <li>
+      <ul>
+        <li>The ajax request was successful!!!</li>
+        <li>Time for the success callback!</li>
+        <li>Let's provide the callback with the data in the response</li>
+      </ul>
+    </li>
+    <li>Create a new javascript person model based on that data</li>
+    <li>
+      Place that new js person object in the collection's models.  FIRE addFlare!
+    </li>
+    <li>
+      Let's SEE it on the SCREEN!
+      <ul>
+        <li>We are listening for the 'addFlare'</li>
+        <li>When it is fired... we clear and render the entire list</li>
+      </ul>
+    </li>
+
+  </ol>
+</p>
+
+
+

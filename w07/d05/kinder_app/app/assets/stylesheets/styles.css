@@ -1,0 +1,41 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Philosopher', sans-serif;
+  text-align: center;
+}
+
+.main-container {
+  height: 100%;
+}
+
+.meow {
+  width: 20em;
+  height: 100%;
+  float: left;
+  background-color: #339933;
+  margin: 3em 0;
+
+}
+
+.kitten-container {
+  display: inline-block;
+  margin-top: 15%;
+}
+
+.kitten {
+  border-radius: 50%;
+}
+
+.not-meow {
+  width: 20em;
+  height: 100%;
+  float: right;
+  background-color: #FFA9C6;
+
+  margin: 3em 0;
+}
+
+

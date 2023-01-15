@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backbone Book Table</title>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+
+  <!-- ******* Libraries ******* -->
+  <script src='javascripts/libraries/jquery.js'></script>
+  <script src='javascripts/libraries/underscore.js'></script>
+  <script src='javascripts/libraries/backbone.js'></script>
+
+  <!-- ******* Templates ******* -->
+  <script id='author-template' type='text/template'>
+    <h2>
+      <%- name %>
+      <button name="free-button">Free</button>
+    </h2>
+    <form>
+      <input type='text' placeholder='book-title' name='title'></input>
+    </form>
+    <ul class='books-I-penned'>
+    </ul>
+  </script>
+
+  <script id='book-template' type='text/template'>
+    <h3 class='book'>
+      <%- title %>
+    </h3>
+  </script>
+
+
+  <!-- ******* Book ******* -->
+  <script src='javascripts/backbone/book.js'></script>
+
+  <!-- ******* Author ******* -->
+  <script src='javascripts/backbone/author.js'></script>
+
+
+  <!-- ******* app ******* -->
+  <script src='javascripts/app.js'></script>
+
+</head>
+<body>
+
+  <form class='new-author' >
+    <input type="text" placeholder='author-name' class='author-name'>
+  </form>
+
+  <ul class='street-side-table'>
+  </ul>
+
+</body>
+</html>

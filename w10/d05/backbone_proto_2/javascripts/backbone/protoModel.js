@@ -1,0 +1,1 @@
+ProtoModel = Backbone.Model.extend({});

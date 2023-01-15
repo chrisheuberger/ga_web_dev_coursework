@@ -1,10 +1,10 @@
 body{
-  background-color: lightblue;
+  background-color: lightgray;
 }
 
 li {
   width: 20em;
-  border: 1px solid lightyellow;
+  border: 2px solid blue;
 }
 
 li:nth-child(even) {

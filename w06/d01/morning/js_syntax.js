@@ -1,6 +1,6 @@
 // js comments
 
-var myJSNameArray = ['lich', 'da', 'grey'];
+var myJSNameArray = ['lich', 'da', 'gray'];
 
 function multiply(x, y){
   return (x * y);

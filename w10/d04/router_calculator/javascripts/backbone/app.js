@@ -3,14 +3,14 @@ var Router = Backbone.Router.extend({
     this.$body = $('body');
   },
   routes: {
-    '' : 'index',
+    ''                : 'index',
     // url is router_calculator/index.html#hello/chris
-    'hello/:name' : 'hello',
+    'hello/:name'     : 'hello',
     // url is router_calculator/index.html#add/3/5
-    'add/:x/:y' : 'add',
-    'subtract/:x/:y' : 'subtract',
-    'multiply/:x/:y' : 'multiply',
-    'divide/:x/:y' : 'divide'
+    'add/:x/:y'       : 'add',
+    'subtract/:x/:y'  : 'subtract',
+    'multiply/:x/:y'  : 'multiply',
+    'divide/:x/:y'    : 'divide'
   },
   index: function(){
     this.$body.html('welcome');

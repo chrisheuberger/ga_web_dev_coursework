@@ -1,0 +1,12 @@
+#clock {
+  position: relative;
+  width: 378px;
+  height: 378px;
+ left: 50%;
+  margin: 5em 0 0 -189px;
+}
+
+#clock div {
+  position: absolute;
+}
+

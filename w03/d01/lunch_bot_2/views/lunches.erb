@@ -1,0 +1,8 @@
+<% def self.run_sql(sql_statement)
+    connection = PG.connect(:dbname => 'wdi_lunches')
+    response = connection.exec(sql_statement)
+    connection.close
+    return response
+  end %>
+<% sql_statement = "SELECT * FROM lunches;" %>
+<h1><%= run_sql(sql_statement) %></h1>

@@ -1,0 +1,8 @@
+#ActiveRecord::Base.establish_connection({adapter: postgresql, database: kittens_intro_app_development })
+
+development:
+  adapter: postgresql
+  database: kittens_intro_app_development
+
+
+

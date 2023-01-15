@@ -1,0 +1,7 @@
+<% @squares.each do |square| %>
+  <div class="square" style="background-color:<%=square.color%>; border-radius:<%=square.border_radius%>px; height:<%= square.side_length %>px; width:<%= square.side_length %>px" ></div>
+<% end %>
+
+<a href="/squares/new">
+  <button>CREATE SQUARE</button>
+</a>

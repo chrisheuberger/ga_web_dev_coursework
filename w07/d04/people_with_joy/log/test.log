@@ -1,0 +1,2215 @@
+  [1m[36m (264.2ms)[0m  [1mCREATE DATABASE "people_with_joy_test" ENCODING = 'unicode'[0m
+  [1m[36mSQL (6.6ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.5ms)[0m  CREATE TABLE "people" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140603141547')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (12.1ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:10:48.650581"], ["name", "Andre"], ["updated_at", "2014-06-03 15:10:48.650581"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:13:12.806594"], ["name", "Andre"], ["updated_at", "2014-06-03 15:13:12.806594"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 500 Internal Server Error in 14ms
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:14:24.866903"], ["name", "Andre"], ["updated_at", "2014-06-03 15:14:24.866903"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:17:07.961641"], ["name", "Andre"], ["updated_at", "2014-06-03 15:17:07.961641"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:20:47.549517"], ["name", "Andre"], ["updated_at", "2014-06-03 15:20:47.549517"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:23:49.289882"], ["name", "Andre"], ["updated_at", "2014-06-03 15:23:49.289882"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:23:49.311331"], ["name", "Andre"], ["updated_at", "2014-06-03 15:23:49.311331"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:25:56.991196"], ["name", "Andre"], ["updated_at", "2014-06-03 15:25:56.991196"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:25:57.018389"], ["name", "Andre"], ["updated_at", "2014-06-03 15:25:57.018389"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:40:12.440089"], ["name", "Andre"], ["updated_at", "2014-06-03 15:40:12.440089"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendered people/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:40:12.463945"], ["name", "Andre"], ["updated_at", "2014-06-03 15:40:12.463945"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"11"}
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:40:12.471679"], ["name", "Andre"], ["updated_at", "2014-06-03 15:40:12.471679"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"12"}
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:40:12.478731"], ["name", "Andre"], ["updated_at", "2014-06-03 15:40:12.478731"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:40:12.487349"], ["name", "Andre"], ["updated_at", "2014-06-03 15:40:12.487349"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:41:45.820544"], ["name", "Andre"], ["updated_at", "2014-06-03 15:41:45.820544"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 15]]
+  Rendered people/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:41:45.849815"], ["name", "Andre"], ["updated_at", "2014-06-03 15:41:45.849815"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 16]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:41:45.859765"], ["name", "Andre"], ["updated_at", "2014-06-03 15:41:45.859765"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 17]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:41:45.868510"], ["name", "Andre"], ["updated_at", "2014-06-03 15:41:45.868510"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:41:45.876575"], ["name", "Andre"], ["updated_at", "2014-06-03 15:41:45.876575"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:47:28.554999"], ["name", "Andre"], ["updated_at", "2014-06-03 15:47:28.554999"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 20]]
+  Rendered people/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:47:28.583620"], ["name", "Andre"], ["updated_at", "2014-06-03 15:47:28.583620"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 21]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:47:28.590934"], ["name", "Andre"], ["updated_at", "2014-06-03 15:47:28.590934"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 22]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:47:28.599409"], ["name", "Andre"], ["updated_at", "2014-06-03 15:47:28.599409"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:47:28.608543"], ["name", "Andre"], ["updated_at", "2014-06-03 15:47:28.608543"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:47:28.616397"], ["name", "Andre"], ["updated_at", "2014-06-03 15:47:28.616397"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:47:28.621554"], ["name", "Andre"], ["updated_at", "2014-06-03 15:47:28.621554"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:47:28.625977"], ["name", "Andre"], ["updated_at", "2014-06-03 15:47:28.625977"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:48:21.307410"], ["name", "Andre"], ["updated_at", "2014-06-03 15:48:21.307410"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:48:21.316622"], ["name", "Andre"], ["updated_at", "2014-06-03 15:48:21.316622"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:48:21.320644"], ["name", "Andre"], ["updated_at", "2014-06-03 15:48:21.320644"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:48:21.327147"], ["name", "Andre"], ["updated_at", "2014-06-03 15:48:21.327147"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 31]]
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:48:21.348234"], ["name", "Andre"], ["updated_at", "2014-06-03 15:48:21.348234"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 32]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:48:21.356036"], ["name", "Andre"], ["updated_at", "2014-06-03 15:48:21.356036"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 33]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:48:21.366558"], ["name", "Andre"], ["updated_at", "2014-06-03 15:48:21.366558"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:48:21.375621"], ["name", "Andre"], ["updated_at", "2014-06-03 15:48:21.375621"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:50:05.575729"], ["name", "Andre"], ["updated_at", "2014-06-03 15:50:05.575729"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 36]]
+  Rendered people/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:50:05.603756"], ["name", "Andre"], ["updated_at", "2014-06-03 15:50:05.603756"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 37]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:50:05.613059"], ["name", "Andre"], ["updated_at", "2014-06-03 15:50:05.613059"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 38]]
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:50:05.624374"], ["name", "Andre"], ["updated_at", "2014-06-03 15:50:05.624374"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:50:05.633587"], ["name", "Andre"], ["updated_at", "2014-06-03 15:50:05.633587"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:50:05.643648"], ["name", "Andre"], ["updated_at", "2014-06-03 15:50:05.643648"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 41]]
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:50:05.652429"], ["name", "Andre"], ["updated_at", "2014-06-03 15:50:05.652429"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 42]]
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:50:05.662113"], ["name", "Andre"], ["updated_at", "2014-06-03 15:50:05.662113"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 43]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:53:29.902016"], ["name", "Andre"], ["updated_at", "2014-06-03 15:53:29.902016"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 44]]
+  Rendered people/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:53:29.931617"], ["name", "Andre"], ["updated_at", "2014-06-03 15:53:29.931617"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 45]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:53:29.939956"], ["name", "Andre"], ["updated_at", "2014-06-03 15:53:29.939956"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 46]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:53:29.949067"], ["name", "Andre"], ["updated_at", "2014-06-03 15:53:29.949067"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 15:53:29.957155"], ["name", "Andre"], ["updated_at", "2014-06-03 15:53:29.957155"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:53:29.967667"], ["name", "Andre"], ["updated_at", "2014-06-03 15:53:29.967667"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 49]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:53:29.977706"], ["name", "Andre"], ["updated_at", "2014-06-03 15:53:29.977706"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 50]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 15:53:29.985100"], ["name", "Andre"], ["updated_at", "2014-06-03 15:53:29.985100"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 51]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:02:50.613872"], ["name", "Andre"], ["updated_at", "2014-06-03 16:02:50.613872"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:02:50.637069"], ["name", "Andre"], ["updated_at", "2014-06-03 16:02:50.637069"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:02:50.646484"], ["name", "Andre"], ["updated_at", "2014-06-03 16:02:50.646484"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 54]]
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:02:50.658241"], ["name", "Andre"], ["updated_at", "2014-06-03 16:02:50.658241"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 55]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:02:50.667868"], ["name", "Andre"], ["updated_at", "2014-06-03 16:02:50.667868"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 56]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:02:50.677590"], ["name", "Andre"], ["updated_at", "2014-06-03 16:02:50.677590"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"57"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 57]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:02:50.687704"], ["name", "Andre"], ["updated_at", "2014-06-03 16:02:50.687704"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 58]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:02:50.695980"], ["name", "Andre"], ["updated_at", "2014-06-03 16:02:50.695980"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"59"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 59]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:03:15.232168"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:15.232168"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:03:15.255103"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:15.255103"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:03:15.265514"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:15.265514"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 62]]
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:03:15.277759"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:15.277759"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"63"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 63]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:03:15.287171"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:15.287171"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 64]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:03:15.298590"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:15.298590"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"65"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 65]]
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:03:15.310265"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:15.310265"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"66"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 66]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:03:15.318308"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:15.318308"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 67]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:03:37.246527"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:37.246527"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:03:37.271269"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:37.271269"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:03:37.281620"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:37.281620"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"70"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 70]]
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:03:37.294143"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:37.294143"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 71]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:03:37.302044"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:37.302044"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 72]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:03:37.310368"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:37.310368"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 73]]
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:03:37.321667"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:37.321667"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 74]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:03:37.332567"], ["name", "Andre"], ["updated_at", "2014-06-03 16:03:37.332567"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"75"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 75]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:04:08.563487"], ["name", "Andre"], ["updated_at", "2014-06-03 16:04:08.563487"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 76]]
+  Rendered people/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:04:08.593686"], ["name", "Andre"], ["updated_at", "2014-06-03 16:04:08.593686"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"77"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 77]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:04:08.601039"], ["name", "Andre"], ["updated_at", "2014-06-03 16:04:08.601039"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"78"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 78]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:04:08.612036"], ["name", "Andre"], ["updated_at", "2014-06-03 16:04:08.612036"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"79"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 79]]
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:04:08.621553"], ["name", "Andre"], ["updated_at", "2014-06-03 16:04:08.621553"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"80"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 80]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:04:08.630620"], ["name", "Andre"], ["updated_at", "2014-06-03 16:04:08.630620"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"81"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 81]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:04:08.641459"], ["name", "Andre"], ["updated_at", "2014-06-03 16:04:08.641459"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:04:08.649783"], ["name", "Andre"], ["updated_at", "2014-06-03 16:04:08.649783"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+Completed 500 Internal Server Error in 4ms
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:10:38.429078"], ["name", "Andre"], ["updated_at", "2014-06-03 16:10:38.429078"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"84"}
+  [1m[35mPerson Load (0.7ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 84]]
+  Rendered people/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:10:38.455054"], ["name", "Andre"], ["updated_at", "2014-06-03 16:10:38.455054"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"85"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 85]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:10:38.463826"], ["name", "Andre"], ["updated_at", "2014-06-03 16:10:38.463826"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"86"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 86]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:10:38.472736"], ["name", "Andre"], ["updated_at", "2014-06-03 16:10:38.472736"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"87"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 87]]
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:10:38.482515"], ["name", "Andre"], ["updated_at", "2014-06-03 16:10:38.482515"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"88"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 88]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:10:38.491322"], ["name", "Andre"], ["updated_at", "2014-06-03 16:10:38.491322"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"89"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 89]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:10:38.499124"], ["name", "Andre"], ["updated_at", "2014-06-03 16:10:38.499124"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:10:38.507771"], ["name", "Andre"], ["updated_at", "2014-06-03 16:10:38.507771"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:13:17.575423"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:17.575423"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:17.596057"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:17.596057"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:17.605448"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:17.605448"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"94"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 94]]
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:17.615133"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:17.615133"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 95]]
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:17.626620"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:17.626620"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 96]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:17.634886"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:17.634886"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"97"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 97]]
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:17.646484"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:17.646484"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"98"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 98]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:17.655414"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:17.655414"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"99"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 99]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:17.668256"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:13:17.668256"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/100
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:13:17.675829"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:13:17.675829"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/101
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:13:17.683932"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:13:17.683932"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/102
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:13:45.627209"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:45.627209"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:45.649276"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:45.649276"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:45.660665"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:45.660665"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 105]]
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:45.670557"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:45.670557"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"106"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 106]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:45.678400"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:45.678400"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"107"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 107]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:45.690034"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:45.690034"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"108"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 108]]
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:45.699552"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:45.699552"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"109"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 109]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:45.707774"], ["name", "Andre"], ["updated_at", "2014-06-03 16:13:45.707774"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"110"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 110]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-03 16:13:45.719901"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:13:45.719901"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/111
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:13:45.728308"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:13:45.728308"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/112
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:13:45.736578"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:13:45.736578"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/113
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:14:14.553011"], ["name", "Andre"], ["updated_at", "2014-06-03 16:14:14.553011"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:14:14.577939"], ["name", "Andre"], ["updated_at", "2014-06-03 16:14:14.577939"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:14:14.585843"], ["name", "Andre"], ["updated_at", "2014-06-03 16:14:14.585843"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"116"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 116]]
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:14:14.596128"], ["name", "Andre"], ["updated_at", "2014-06-03 16:14:14.596128"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"117"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 117]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:14:14.604672"], ["name", "Andre"], ["updated_at", "2014-06-03 16:14:14.604672"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"118"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 118]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:14:14.616064"], ["name", "Andre"], ["updated_at", "2014-06-03 16:14:14.616064"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"119"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 119]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:14:14.627296"], ["name", "Andre"], ["updated_at", "2014-06-03 16:14:14.627296"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"120"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 120]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:14:14.637350"], ["name", "Andre"], ["updated_at", "2014-06-03 16:14:14.637350"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"121"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 121]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-03 16:14:14.649123"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:14:14.649123"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/122
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:14:14.659005"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:14:14.659005"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/123
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+  [1m[35mPerson Load (0.8ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:14:14.667523"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:14:14.667523"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/124
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:15:25.714693"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:15:25.714693"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/125
+Completed 302 Found in 10ms (ActiveRecord: 1.2ms)
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:15:25.728217"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:15:25.728217"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/126
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-03 16:15:25.735261"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:15:25.735261"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/127
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:15:25.741962"], ["name", "Andre"], ["updated_at", "2014-06-03 16:15:25.741962"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"128"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 128]]
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:15:25.758726"], ["name", "Andre"], ["updated_at", "2014-06-03 16:15:25.758726"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"129"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 129]]
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:15:25.768647"], ["name", "Andre"], ["updated_at", "2014-06-03 16:15:25.768647"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 130]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:15:25.777075"], ["name", "Andre"], ["updated_at", "2014-06-03 16:15:25.777075"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:15:25.784954"], ["name", "Andre"], ["updated_at", "2014-06-03 16:15:25.784954"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:15:25.792277"], ["name", "Andre"], ["updated_at", "2014-06-03 16:15:25.792277"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"133"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 133]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:15:25.800936"], ["name", "Andre"], ["updated_at", "2014-06-03 16:15:25.800936"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"134"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 134]]
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:15:25.810927"], ["name", "Andre"], ["updated_at", "2014-06-03 16:15:25.810927"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"135"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 135]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:17:32.254812"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:32.254812"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:32.278986"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:32.278986"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:32.289076"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:32.289076"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"138"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 138]]
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:32.298676"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:32.298676"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"139"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 139]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:32.306393"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:32.306393"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 140]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:32.315007"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:32.315007"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"141"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 141]]
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:32.325701"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:32.325701"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"142"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 142]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:32.334094"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:32.334094"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"143"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 143]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:32.346529"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:17:32.346529"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/144
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:17:32.353856"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:17:32.353856"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/145
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:17:32.361893"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:17:32.361893"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/146
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:17:45.251888"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:45.251888"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:45.272817"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:45.272817"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:45.281280"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:45.281280"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"149"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 149]]
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:45.294283"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:45.294283"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"150"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 150]]
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:45.304409"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:45.304409"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"151"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 151]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:45.313929"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:45.313929"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"152"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 152]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:45.324447"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:45.324447"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"153"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 153]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:45.334882"], ["name", "Andre"], ["updated_at", "2014-06-03 16:17:45.334882"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"154"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 154]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-03 16:17:45.345526"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:17:45.345526"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/155
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:17:45.354373"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:17:45.354373"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/156
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35mPerson Load (0.7ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:17:45.362798"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:17:45.362798"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/157
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:23:31.687792"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:23:31.687792"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/158
+Completed 302 Found in 11ms (ActiveRecord: 1.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-03 16:23:31.701250"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:23:31.701250"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/159
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-03 16:23:31.711571"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:23:31.711571"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/160
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:23:31.717319"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:31.717319"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:23:31.721624"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:31.721624"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:23:31.725902"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:31.725902"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:23:31.730653"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:31.730653"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"164"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 164]]
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:23:31.750130"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:31.750130"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"165"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 165]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:23:31.758041"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:31.758041"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"166"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 166]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:23:31.767317"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:31.767317"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"167"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 167]]
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:23:31.777777"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:31.777777"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"168"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 168]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:23:31.785399"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:31.785399"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"169"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 169]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:23:31.793878"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:31.793878"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:23:31.802192"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:31.802192"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:23:44.348280"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:44.348280"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"172"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 172]]
+  Rendered people/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:23:44.374920"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:44.374920"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"173"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 173]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:23:44.384662"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:44.384662"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"174"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 174]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:23:44.393663"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:44.393663"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:23:44.402987"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:44.402987"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:23:44.423803"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:44.423803"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"177"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 177]]
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:23:44.437291"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:44.437291"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"178"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 178]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:23:44.448026"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:44.448026"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"179"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 179]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:23:44.459549"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:44.459549"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:23:44.474799"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:44.474799"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:23:44.481492"], ["name", "Andre"], ["updated_at", "2014-06-03 16:23:44.481492"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:23:44.489335"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:23:44.489335"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/183
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:23:44.499511"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:23:44.499511"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/184
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:23:44.507307"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:23:44.507307"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/185
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:27:20.033772"], ["name", "Andre"], ["updated_at", "2014-06-03 16:27:20.033772"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#update as HTML
+  Parameters: {"person"=>{"name"=>"nondre"}, "id"=>"186"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:27:20.043872"], ["name", "nondre"], ["updated_at", "2014-06-03 16:27:20.043872"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/187
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:27:20.051342"], ["name", "Andre"], ["updated_at", "2014-06-03 16:27:20.051342"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#update as HTML
+  Parameters: {"person"=>{"name"=>"nondre"}, "id"=>"188"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:27:20.056897"], ["name", "nondre"], ["updated_at", "2014-06-03 16:27:20.056897"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/189
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 188]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:27:20.064684"], ["name", "Andre"], ["updated_at", "2014-06-03 16:27:20.064684"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#update as HTML
+  Parameters: {"person"=>{"name"=>"nondre"}, "id"=>"190"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:27:20.067996"], ["name", "nondre"], ["updated_at", "2014-06-03 16:27:20.067996"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/191
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:27:20.074985"], ["name", "Andre"], ["updated_at", "2014-06-03 16:27:20.074985"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"192"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 192]]
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:27:20.094769"], ["name", "Andre"], ["updated_at", "2014-06-03 16:27:20.094769"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"193"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 193]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:27:20.105477"], ["name", "Andre"], ["updated_at", "2014-06-03 16:27:20.105477"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"194"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 194]]
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:27:20.115528"], ["name", "Andre"], ["updated_at", "2014-06-03 16:27:20.115528"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"195"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 195]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:27:20.124600"], ["name", "Andre"], ["updated_at", "2014-06-03 16:27:20.124600"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"196"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 196]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:27:20.133857"], ["name", "Andre"], ["updated_at", "2014-06-03 16:27:20.133857"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"197"}
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 197]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:27:20.143104"], ["name", "Andre"], ["updated_at", "2014-06-03 16:27:20.143104"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:27:20.151274"], ["name", "Andre"], ["updated_at", "2014-06-03 16:27:20.151274"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:27:20.162325"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:27:20.162325"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/200
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-03 16:27:20.169255"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:27:20.169255"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/201
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-03 16:27:20.176804"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:27:20.176804"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/202
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:39:08.396781"], ["name", "Andre"], ["updated_at", "2014-06-03 16:39:08.396781"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "people"
+Processing by PeopleController#destroy as HTML
+  Parameters: {"id"=>"203"}
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "people" WHERE "people"."id" = 203[0m
+Redirected to http://test.host/people
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "people"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:39:08.424046"], ["name", "Andre"], ["updated_at", "2014-06-03 16:39:08.424046"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#update as HTML
+  Parameters: {"person"=>{"name"=>"nondre"}, "id"=>"204"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 204]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "people" SET "name" = $1, "updated_at" = $2 WHERE "people"."id" = 204  [["name", "nondre"], ["updated_at", "2014-06-03 16:39:08.429880"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/204
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:39:08.437588"], ["name", "Andre"], ["updated_at", "2014-06-03 16:39:08.437588"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#update as HTML
+  Parameters: {"person"=>{"name"=>"nondre"}, "id"=>"205"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 205]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "people" SET "name" = $1, "updated_at" = $2 WHERE "people"."id" = 205[0m  [["name", "nondre"], ["updated_at", "2014-06-03 16:39:08.442418"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/205
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 205]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:39:08.447783"], ["name", "Andre"], ["updated_at", "2014-06-03 16:39:08.447783"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#update as HTML
+  Parameters: {"person"=>{"name"=>"nondre"}, "id"=>"206"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 206]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "people" SET "name" = $1, "updated_at" = $2 WHERE "people"."id" = 206[0m  [["name", "nondre"], ["updated_at", "2014-06-03 16:39:08.452035"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/206
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:39:08.459947"], ["name", "Andre"], ["updated_at", "2014-06-03 16:39:08.459947"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"207"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 207]]
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:39:08.479915"], ["name", "Andre"], ["updated_at", "2014-06-03 16:39:08.479915"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"208"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 208]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:39:08.489986"], ["name", "Andre"], ["updated_at", "2014-06-03 16:39:08.489986"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"209"}
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 209]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:39:08.498690"], ["name", "Andre"], ["updated_at", "2014-06-03 16:39:08.498690"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"210"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 210]]
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:39:08.509582"], ["name", "Andre"], ["updated_at", "2014-06-03 16:39:08.509582"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"211"}
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 211]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:39:08.517275"], ["name", "Andre"], ["updated_at", "2014-06-03 16:39:08.517275"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"212"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 212]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-03 16:39:08.525968"], ["name", "Andre"], ["updated_at", "2014-06-03 16:39:08.525968"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-03 16:39:08.533500"], ["name", "Andre"], ["updated_at", "2014-06-03 16:39:08.533500"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#new as HTML
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#new as HTML
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-03 16:39:08.558134"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:39:08.558134"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/215
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:39:08.564404"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:39:08.564404"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/216
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+  [1m[35mPerson Load (0.7ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-03 16:39:08.573960"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-03 16:39:08.573960"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/217
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (2.6ms)[0m  [1mCREATE DATABASE "people_with_joy_test" ENCODING = 'unicode'[0m
+PG::DuplicateDatabase: ERROR:  database "people_with_joy_test" already exists
+: CREATE DATABASE "people_with_joy_test" ENCODING = 'unicode'
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-04 14:29:24.935889"], ["name", "Andre"], ["updated_at", "2014-06-04 14:29:24.935889"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-04 14:29:24.963107"], ["name", "Andre"], ["updated_at", "2014-06-04 14:29:24.963107"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#index as HTML
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-04 14:29:24.970782"], ["name", "Andre"], ["updated_at", "2014-06-04 14:29:24.970782"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#update as HTML
+  Parameters: {"person"=>{"name"=>"nondre"}, "id"=>"220"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 220]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "people" SET "name" = $1, "updated_at" = $2 WHERE "people"."id" = 220[0m  [["name", "nondre"], ["updated_at", "2014-06-04 14:29:24.977532"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/220
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-04 14:29:24.985318"], ["name", "Andre"], ["updated_at", "2014-06-04 14:29:24.985318"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PeopleController#update as HTML
+  Parameters: {"person"=>{"name"=>"nondre"}, "id"=>"221"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1  [["id", 221]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "people" SET "name" = $1, "updated_at" = $2 WHERE "people"."id" = 221  [["name", "nondre"], ["updated_at", "2014-06-04 14:29:24.989737"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/221
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-04 14:29:24.996151"], ["name", "Andre"], ["updated_at", "2014-06-04 14:29:24.996151"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#update as HTML
+  Parameters: {"person"=>{"name"=>"nondre"}, "id"=>"222"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 222]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "people" SET "name" = $1, "updated_at" = $2 WHERE "people"."id" = 222[0m  [["name", "nondre"], ["updated_at", "2014-06-04 14:29:25.003330"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/222
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 222]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-04 14:29:25.010787"], ["name", "Andre"], ["updated_at", "2014-06-04 14:29:25.010787"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"223"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 223]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-04 14:29:25.019296"], ["name", "Andre"], ["updated_at", "2014-06-04 14:29:25.019296"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"224"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 224]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-04 14:29:25.030252"], ["name", "Andre"], ["updated_at", "2014-06-04 14:29:25.030252"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"225"}
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 225]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-04 14:29:25.039896"], ["name", "Andre"], ["updated_at", "2014-06-04 14:29:25.039896"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "people"[0m
+Processing by PeopleController#destroy as HTML
+  Parameters: {"id"=>"226"}
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "people" WHERE "people"."id" = 226
+Redirected to http://test.host/people
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "people"[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-04 14:29:25.062945"], ["name", "Andre"], ["updated_at", "2014-06-04 14:29:25.062945"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"227"}
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 227]]
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-04 14:29:25.071946"], ["name", "Andre"], ["updated_at", "2014-06-04 14:29:25.071946"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"228"}
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 228]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-04 14:29:25.081401"], ["name", "Andre"], ["updated_at", "2014-06-04 14:29:25.081401"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"229"}
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 229]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-04 14:29:25.092760"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-04 14:29:25.092760"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/230
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-04 14:29:25.100965"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-04 14:29:25.100965"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/231
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"name"=>"Kathew Lamp", "email"=>"klool@lampmail.com"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-04 14:29:25.108910"], ["email", "klool@lampmail.com"], ["name", "Kathew Lamp"], ["updated_at", "2014-06-04 14:29:25.108910"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/232
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people"   ORDER BY "people"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PeopleController#new as HTML
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by PeopleController#new as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"

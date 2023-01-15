@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <input class="colorizable" type="text" value="input a name">
+      <ul id="students"></ul>
+      <ul id="smileys"></ul>
+      <ul>
+        <li class="colorizable">Aldric</li>
+        <li>Andrew</li>
+        <li class="colorizable">Matt</li>
+      </ul>
+      <script>
+      function filterByNodeType(num) {
+          var childNodes = document.body.childNodes;
+          for (var i = 0; i< childNodes.length; i++) {
+            if (childNodes[i].nodeType == num) {
+              console.log(childNodes[i]);
+            }
+          }
+      }
+      function nodeIt() {
+          var childNodes = document.body.childNodes;
+          for (var i = 0; i< childNodes.length; i++) {
+              console.log(childNodes[i]);
+          }
+      }
+      function childIt() {
+          var children = document.body.children;
+          for (var i = 0; i< children.length; i++) {
+              console.log(children[i]);
+          }
+      }
+      function theG(ul) {
+         var children = ul.children;
+         for (var i = 0; i<children.length; i++) {
+           children[i].innerHTML += "...the great";
+         }
+      }
+      function theG2(ul) {
+         ul.innerHTML = ""
+         for (i=0; i<3; i++) {
+          ul.innerHTML += "<div style='background-color: blue; height: 20px; width: 20px; border-radius: 10px'></div>";
+         }
+      }
+      function groove(ul) {
+        var children = ul.children;
+        for (var i = 0; i<children.length; i++) {
+          children[i].setAttribute('groovy', true);
+        }
+      }
+      function classy(ul) {
+        var children = ul.children;
+        for (var i = 0; i<children.length; i++) {
+          children[i].setAttribute('class', 'teacher');
+        }
+      }
+      function v_it(input) {
+        return input.value;
+      }
+      function fonty(tagName, FF) {
+        var allTags = document.getElementsByTagName(tagName);
+        for (var i=0; i<allTags.length; i++) {
+          allTags[i].style.fontFamily = FF;
+        }
+      }
+      function colorize(color) {
+        var allClasses = document.getElementsByClassName('colorizable');
+        for (var i=0; i<allClasses.length; i++) {
+          allClasses[i].style.backgroundColor = color;
+        }
+      }
+      function squares(num, size) {
+        var elems = [];
+        for (var i = 0; i < num; i++) {
+          curr_sq = document.createElement('div');
+          curr_sq.style.height = size + 'px';
+          curr_sq.style.width = size + 'px';
+          curr_sq.style.backgroundColor = 'gray';
+          elems.push(curr_sq);
+        }
+        return elems;
+      }
+      function buildSmiles(num, size) {
+        var elems = [];
+        for (var i = 0; i<num; i++) {
+          var circle = document.createElement('div');
+          circle.style.width = size + 'px';
+          circle.style.height = size + 'px';
+          circle.style.borderRadius = size/2 + 'px';
+          circle.style.backgroundColor = 'gray';
+          var textNode = document.createTextNode('^_^');
+          circle.appendChild(textNode);
+          elems.push(circle);
+        }
+        return elems;
+      }
+      function aSmToDom(a, b) {
+        var x = buildSmiles(a, b);
+        var u = document.getElementById('smileys');
+        for (var i = 0; i< x.length; i++) {
+          u.appendChild(x[i]);
+        }
+      }
+      function createLis(array) {
+        var arr = [];
+        for (var i=0; i<array.length; i++) {
+          var newLi = document.createElement('li');
+          var currText = document.createTextNode(array[i]);
+          newLi.appendChild(currText);
+          arr.push(newLi);
+        }
+        return arr;
+      }
+      function prependLis() {
+        var protos = [
+                      'Nessa Nguyen',
+                      'Jeff Winkler',
+                      'John Murphy',
+                      'Jeff Drakos',
+                      'Rebecca Strong',
+                      'Gardner Lonsberry' ,
+                      'Jonathan Gean',
+                      'Nathaniel Tuvera',
+                      'Tim Hannes',
+                      'Aziz Hasanov',
+                      'Chris Heuberger',
+                      'Dmitry Shamis' ,
+                      'Corey Leveen',
+                      'Paul Hiam',
+                      'Steven Doran',
+                      'Ben Karl',
+                      'Kristen Tonga',
+                      'Wake Lankard',
+                      'Carlos Pichardo' ,
+                      'Paul Gasberra',
+                      'Andrea Trapp',
+                      'Heidi Williams-Foy'
+                      ]
+         var allLis = createLis(protos);
+         parent = document.getElementById('students');
+         parent.appendChild(allLis[0]);
+
+         //parent.insertBefore(allLis[0], nextSib);
+         for (var i = 1; i < allLis.length; i++) {
+            nextSib = parent.firstElementChild;
+            parent.insertBefore(allLis[i], nextSib);
+         }
+
+      }
+
+
+
+
+      </script>
+    </body>
+</html>
+
+
+

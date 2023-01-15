@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+  function validateTelephone(phone) {
+    var phoneRegex = /^\(?\d{3}\)?[-. ]?\d{3}[-.]?\d{4}$/;
+    return phone.search(phoneRegex) > -1;
+  }
+  function addNewPhone(phone) {
+      var list = document.querySelector('.numbers');
+      var el = document.createElement('li');
+      el.innerHTML = phone;
+      list.appendChild(el);
+  }
+
+  function setMeUpScotty() {
+    var form = document.querySelector('.valid8');
+    form.addEventListener('submit', function(eventOhMYGodMyFACEIcannotFEELMYFACE) {
+      eventOhMYGodMyFACEIcannotFEELMYFACE.preventDefault();
+      var telephoneField = eventOhMYGodMyFACEIcannotFEELMYFACE.target.querySelector('.tel');
+      if(validateTelephone(telephoneField.value)) {
+        addNewPhone(telephoneField.value);
+      } else {
+        alert('Nope! Try again.');
+      }
+    });
+  }
+  window.onload = setMeUpScotty;
+  </script>
+</head>
+<body>
+  5, 6, 7, 8, who do we vali-hi-date? (rhythm is hard!)
+  <form action="" class="valid8">
+    <p>
+      <label>Email
+        <input type="email" class="email">
+      </label>
+    </p>
+    <p>
+      <label>Telephone
+        <input type="tel" class="tel">
+      </label>
+    </p>
+    <input type="submit" value="Valee-today">
+  </form>
+
+  <ul class='numbers'></ul>
+</body>
+</html>

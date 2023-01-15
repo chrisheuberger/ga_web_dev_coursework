@@ -1,0 +1,15 @@
+<form action="/squares" method="post">
+  <%= token_tag %>
+  <p>
+      <input type="text" name="square[color]" placeholder="color">
+  </p>
+  <p>
+      <input type="text" name="square[border_radius]" placeholder="border radius">
+  </p>
+  <p>
+      <input type="text" name="square[side_length]" placeholder="side length">
+  </p>
+  <p>
+      <input type="submit">
+  </p>
+</form>

@@ -1,0 +1,7 @@
+<form action="/movies/<%= @movie.id %>" method='post'>
+  <input type="hidden" name='_method' value='put'>
+  <input type="text" value='<%= @movie.title %>' name='movie_title'>
+  <input type="text" value='<%= @movie.director %>' name='movie_director'>
+  <input type="text" value='<%= @movie.screenwriter %>' name='movie_screenwriter'>
+  <input type="submit">
+</form>

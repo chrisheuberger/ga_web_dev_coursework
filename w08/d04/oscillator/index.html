@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="jquery.js"></script>
+</head>
+<body>
+  <button id='button'>Osc</button>
+  <script>
+  $(document).ready(function(){
+    var context = new webkitAudioContext();
+
+    function makeDistortionCurve(number) {
+      var k = typeof amount === 'number' ? amount : 50,
+        n_samples = 44100,
+        curve = new Float32Array(n_samples),
+        deg = Math.PI / 180,
+        i = 0,
+        x;
+      for ( ; i < n_samples; ++i ) {
+        x = i * 2 / n_samples - 1;
+        curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
+      }
+      return curve;
+    };
+
+    setInterval(function(){
+      var random = Math.random() * 8000;
+      oscillator2.frequency.value = random
+    }, 20);
+    setInterval(function(){
+      var random = Math.random() * 200;
+      oscillator3.frequency.value = random
+    }, 300);
+    setInterval(function(){
+      var random = Math.random() * 9000;
+      oscillator4.frequency.value = random
+    }, 100);
+
+    oscillator = context.createOscillator();
+    oscillator2 = context.createOscillator();
+    oscillator3 = context.createOscillator();
+    oscillator4 = context.createOscillator();
+    var gain = context.createGain();
+    oscillator.connect(gain);
+    gain.connect(context.destination);
+    oscillator.start(0);
+    gain.gain.value = 0;
+
+    hangTime = 50
+    var intTime = 400
+    setInterval(function(){
+      var now = context.currentTime;
+      gain.gain.cancelScheduledValues( now );
+      gain.gain.setValueAtTime(gain.gain.value, now);
+      gain.gain.linearRampToValueAtTime(1 , now + 0.2);
+    }, intTime)
+
+    var oscStart = function(){
+    var now = context.currentTime;
+      gain.gain.cancelScheduledValues( now );
+      gain.gain.setValueAtTime(gain.gain.value, now);
+      gain.gain.linearRampToValueAtTime(1, now + 0.2);
+    };
+
+    setInterval(function(){
+      var now = context.currentTime;
+      gain.gain.cancelScheduledValues( now );
+      gain.gain.setValueAtTime(gain.gain.value, now);
+      gain.gain.linearRampToValueAtTime(0 , now + 0.2)},  hangTime
+    );
+
+    var oscOff = function(){
+    var now = context.currentTime;
+    gain.gain.cancelScheduledValues( now );
+    gain.gain.setValueAtTime(gain.gain.value, now);
+    gain.gain.linearRampToValueAtTime(0 , now + 0.2);
+    };
+
+    oscillator.curve.value = curve;
+
+    oscillator.type = 1;
+    oscillator2.type = 2;
+    oscillator3.type = 2;
+    oscillator4.type = 2;
+
+    oscillator.frequency.value = Math.random() * 200;
+    oscillator2.frequency.value = Math.random() * 200;
+    oscillator3.frequency.value = Math.random() * 200;
+    oscillator2.detune.value = setInterval(Math.random() * 400, 20);
+    oscillator3.detune.value = setInterval(Math.random() * 400, 20);
+    oscillator4.frequency.value = Math.random() * 200;
+
+    var filter = context.createBiquadFilter();
+    filter.type = 2; // LOWPASS
+    filter.frequency.value = oscillator2.frequency.value;
+    oscillator3.connect(filter)
+    filter.connect(context.destination);
+
+  });
+  </script>
+
+</body>
+</html>

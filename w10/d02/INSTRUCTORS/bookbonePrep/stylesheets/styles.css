@@ -1,0 +1,46 @@
+body {
+  background: url('../images/retina_wood.png');
+}
+
+h1 {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+button{
+  font-family: 'Dosis', sans-serif;
+  border: 0;
+  border-radius: 15%;
+  background-color: lightyellow;
+}
+
+input{
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.5em;
+  border-radius: 10%;
+}
+
+.author{
+  border: 1px solid darkgreen;
+  background: url('../images/skulls.png');
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 5px 5px 2px #444444;
+}
+
+.book{
+  border: 1px solid darkred;
+  padding: 0.1em;
+  background: url('../images/extra_clean_paper.png');
+  box-shadow: 5px 5px 2px #444444;
+}
+

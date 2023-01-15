@@ -1,8 +1,5 @@
 var Bananapp = Bananapp || { Models: {}, Collections: {}, Views: {} };
 
-
-
-
 Bananapp.initialize = function(){
 
   var monkeys = new Bananapp.Collections.MonkeyCollection();
@@ -21,8 +18,6 @@ Bananapp.initialize = function(){
 
 };
 
-
 $(function(){
   Bananapp.initialize();
 })
-

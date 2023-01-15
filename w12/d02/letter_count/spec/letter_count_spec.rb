@@ -6,7 +6,6 @@ describe "#letter_count" do
     expect(letter_count("cow")).to eq( {"c" => 1, "o" => 1, "w" => 1} )
   end
 
-
   it "works for repeated letters" do
     expect(letter_count("moon")).to eq( {"m" => 1, "o" => 2, "n" => 1} )
   end

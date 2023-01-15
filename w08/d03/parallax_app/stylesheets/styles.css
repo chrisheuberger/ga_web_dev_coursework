@@ -1,14 +1,14 @@
-body{
+body {
   height: 1000em;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-img{
+img {
   position: relative;
 }
 
-.image-cage{
+.image-cage {
   width: 100%;
   overflow: hidden;
 }
@@ -18,16 +18,16 @@ p {
   padding: 0;
 }
 
-.information-block{
+.information-block {
   height: 8em;
-  background-color: lightblue;
   margin: 0;
   padding: 0;
+  background-color: lightblue;
 }
 
-.image-banner{
+.image-banner {
   height: 15em;
-  overflow: hidden;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }

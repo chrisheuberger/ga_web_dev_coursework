@@ -15,3 +15,30 @@ CREATE TABLE grocery_types
   comestibles boolean,
   libation boolean
 );
+
+CREATE TABLE comestibles
+(
+  id serial4 PRIMARY KEY,
+  food_types varchar(255)
+);
+
+
+CREATE TABLE libations
+(
+  id serial4 PRIMARY KEY,
+  drink_types varchar(40000)
+);
+
+CREATE TABLE food_types
+(
+  food_id integer,
+  type_numbers varchar(255)
+
+)
+
+CREATE TABLE drink_types
+(
+  drink_id integer,
+  type_numbers varchar(255)
+
+)

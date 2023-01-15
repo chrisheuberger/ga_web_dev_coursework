@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Backbananas:  </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+
+    <!-- Libraries -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- Templates -->
+    <script type='text/template' id='monkey-template'>
+      <%= name %>...the monkey.
+      <button data-action='destroy'>
+        Delete
+      </button>
+      <button data-action='edit'>
+        Edit
+      </button>
+    </script>
+
+    <script type='text/template' id='edit-monkey-template'>
+      <form>
+        <input type="text" placeholder="<%= name %>">
+        </input>
+      </form>
+    </script>
+
+
+    <!-- app -->
+    <script type="text/javascript" src='javascripts/backbone/app.js'></script>
+
+    <!-- Models -->
+    <script type="text/javascript" src='javascripts/backbone/models/Monkey.js'></script>
+
+    <!-- Collections -->
+    <script type="text/javascript" src='javascripts/backbone/collections/MonkeyCollection.js'></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src='javascripts/backbone/views/monkeys/MonkeyView.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/views/monkeys/MonkeyListView.js'></script>
+
+  </head>
+
+
+  <body>
+
+    <div class='main container'>
+      <div class="monkeys">
+
+        <div class='monkey-birth-yard'>
+          <form class="monkeyform">
+            <input name="monkey-name" type="text" placeholder='...name the monkey'>
+          </form>
+        </div>
+
+        <ul class='monkey-list'></ul>
+
+      </div>
+    </div>
+
+  </body>
+
+</html>

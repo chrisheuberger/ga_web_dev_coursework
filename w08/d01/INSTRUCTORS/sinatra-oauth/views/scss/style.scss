@@ -1,0 +1,23 @@
+@import 'bourbon/bourbon';
+
+$blue: #1199ff;
+
+
+body {
+    color: $blue;
+    background-color: #115511;
+    font-family: $helvetica;
+}
+
+.header {
+    font-family: 'Dancing Script', cursive;
+
+}
+
+form input {
+    display: block;
+}
+
+.button {
+    @include button(shiny, $blue);
+}

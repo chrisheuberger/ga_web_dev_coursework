@@ -20,8 +20,18 @@ var isPalindrome2 = function(string){
   return true;
 }
 
+function isPalindrome3(word) {
+  var newWord = word.replace(/ /g,'').toLowerCase()
+  for (var i = 0; i < newWord.length; i++) {
+    var lastIndex = newWord.length - 1 - i
+    if (newWord[i] != newWord[lastIndex]) {
+      return false
+    }
+  }
+  return true
+}
+
 String.prototype.isPalindrome = function(){
-  // return isPalindrome(this);
   var i = 0;
   var j = this.length-1;
   while (i <= j){

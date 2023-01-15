@@ -1,0 +1,11 @@
+.choices .button {
+    zoom: 4;
+}
+
+.rps {
+    zoom: 0.5;
+}
+
+.game .play {
+    display: inline-block;
+}

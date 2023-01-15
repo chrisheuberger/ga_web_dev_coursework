@@ -1,0 +1,20 @@
+body{
+  background: url('../images/photography.png')
+}
+
+.wdi-chat-input{
+  background-color: lightgrey;
+}
+
+.wdi-chat-input-box input{
+  width: 75%;
+}
+
+.chat-log li{
+  background-color: lightblue;
+  font-size: 2em;
+  border-radius: 25%;
+  border: 1px solid blue;
+  min-height: 1.5em;
+  padding-left: 15%;
+}

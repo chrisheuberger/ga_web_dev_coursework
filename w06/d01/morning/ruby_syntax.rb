@@ -26,14 +26,14 @@ when 'Monday'
 when 'Tuesday'
   p 'how was that coffee?'
 when 'Friday'
-  p 'I am in luf'
+  p 'Im in luf'
 else
   p 'this is day does not count'
 end
 
 # - - -
 
-my_name = ['lich', 'da', 'grey']
+my_name = ['lich', 'da', 'gray']
 
 my_name.each do |name_itself|
   p name_itself + '...is part of the name'

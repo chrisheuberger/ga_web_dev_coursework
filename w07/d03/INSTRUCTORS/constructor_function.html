@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assert Template</title>
+  <script>
+    function assert(bool, desc){
+      var text = document.createTextNode(desc);
+      var li   = document.createElement('li');
+      li.appendChild(text);
+      li.className = bool ? "pass" : "fail";
+      var results = document.getElementById('results');
+      results.appendChild(li);
+    }
+  </script>
+  <style>
+    body {font-family: Courier new;}
+    #results li.pass{color: chartreuse;}
+    #results li.fail{color: red;}
+  </style>
+</head>
+<body>
+  <ul id="results"></ul>
+  <script>
+
+    //Write a constructor function for a Pizzaiolo object.
+      //It should take a name as a it's only argument
+      //It should set a name attribute
+      //It should have a 'pies' variable that is initialized to 0
+      //It should have a makePie function that increments the value stored in 'this.pies' when it is called.
+
+      function Pizzaiolo(name){
+        this.name = name;
+        this.pies = 0;
+        // this.makePie = function(){
+        //   this.pies++;
+        // }
+      }
+      Pizzaiolo.prototype.makePie = function(){
+        this.pies++;
+      }
+      var mario = new Pizzaiolo('mario');
+      assert(typeof mario === 'object', "Mario is a Pizzaiolo");
+
+      assert(mario.__proto__ === Pizzaiolo.prototype, "mario's proto is the Pizzaiolo.prototype");
+
+      mario.makePie();
+
+      assert(mario.pies === 1, "The make pies function is working");
+      assert(mario.makePie.name === '', "makePie.name == udefined");
+
+    //Create another Pizzailo object
+      // Bestow your new Pizzailo with the ability to steal a pie
+      // (i.e. write a stealPie function)  It should take a pizzaoilo
+      // as an argument (i.e) the pizzaoilo from whom the pie will be stolen.
+
+      var luigi = new Pizzaiolo('luigi');
+
+      luigi.stealPie = function stealPie(pizzaiolo){
+        pizzaiolo.pies--;
+        this.pies++;
+      }
+      luigi.stealPie(mario);
+      assert(luigi.pies === 1 && mario.pies === 0, "luigi is a clever thief");
+
+      mario.stealPie = luigi.stealPie;
+      mario.stealPie(luigi);
+      assert(mario.pies === 1 && luigi.pies === 0, "mario is a clever thief as well");
+
+      // write a drinkEspresso function
+
+
+      Pizzaiolo.prototype.drinkEspresso = function(){
+        this.name = this.name.toUpperCase();
+      }
+
+      mario.drinkEspresso();
+      luigi.drinkEspresso();
+
+      assert(mario.name === "MARIO" && luigi.name === "LUIGI", "all is fair in pizza mkaing and espresso drinking");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

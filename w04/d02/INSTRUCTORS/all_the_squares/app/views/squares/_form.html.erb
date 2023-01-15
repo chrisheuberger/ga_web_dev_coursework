@@ -1,0 +1,9 @@
+<%= form_for @square do |f| %>
+  <%= f.label :color %>
+  <%= f.color_field :color%>
+  <%= f.label :border_radius %>
+  <%= f.text_field :border_radius %>
+  <%= f.label :side_length %>
+  <%= f.text_field :side_length %>
+  <%= f.submit %>
+<% end %>

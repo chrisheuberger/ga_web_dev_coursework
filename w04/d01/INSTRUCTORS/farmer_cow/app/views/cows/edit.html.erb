@@ -1,0 +1,6 @@
+<form action="/farmers/<%= @farmer.id %>/cows/<%= @cow.id %>" method='post'>
+  <input type="hidden" name="_method" value='put'>
+  <%= token_tag %>
+  <input type="text" name='cow[name]' value='<%= @cow %>'>
+  <input type="submit">
+</form>

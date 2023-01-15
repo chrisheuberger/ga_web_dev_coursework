@@ -1,0 +1,13 @@
+<form action="/planets" method='post'>
+  <%= token_tag %>
+  <input type="text" placeholder="name" name='planet[name]'>
+  <input type="text" placeholder="image url" name='planet[image_url]'>
+  <input type="text" placeholder="diameter" name='planet[diameter]'>
+  <input type="text" placeholder="mass" name='planet[mass]'>
+  <input type="text" placeholder="life" name='planet[life]'>
+
+  <input type="submit">
+</form>
+
+<%= render 'form' %>
+

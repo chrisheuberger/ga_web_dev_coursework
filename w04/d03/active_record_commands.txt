@@ -1,0 +1,23 @@
+Artist.create(name: "Picasso", nationality: "Spanish")
+pablo = _
+painting = Painting.create(title: "Guernica")
+pablo.paintings << painting
+Artist.create(name: "Van Gogh", nationality: "Dutch")
+van_gogh = _
+starry_night = Painting.create(title: "Starry Night")
+van_gogh.paintings << starry_night
+Artist.create(name: "Forest Bess", nationality: "American")
+bess_painting = Painting.create(title: “Dedication to Van Gogh”)
+Artist.all
+Painting.all
+Artist.find(2)
+Artist.where(name: "Van Gogh")
+Artist.where(nationality: "Spanish")
+Painting.find(1)
+Painting.where(title: "Guernica")
+picasso = Artist.find_by name:"Picasso"
+picasso.paintings
+painting = Painting.find_by title: “Guernica”
+Artist.find(painting.artist_id)
+Artist.update(2, nationality: "American")
+starry_night.update(artist_id: 1)

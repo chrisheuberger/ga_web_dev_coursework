@@ -1,0 +1,51 @@
+body {
+  background-color: lightgreen;
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  font-size: 1.5em;
+}
+
+li{
+  background-color: lightyellow;
+  border-radius: 1em;
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 50%;
+  box-shadow: .1em .1em darkgreen;
+}
+
+button{
+	border-radius: 50%;
+	background-color: tan;
+}
+
+input{
+	 /*box-shadow: .01em .01em green;*/
+   font-size: 1em;
+   border: 0;
+   margin: 0;
+   border-radius: 15%;
+}
+
+form{
+  display: inline-block;
+  margin: 0;
+}
+
+.monkey-birth-yard{
+  margin: 0;
+  height: 4em;
+  padding: 1em;
+  background: url('../images/tree_bark.png')
+}
+
+
+.monkeyform {
+  width: 100%;
+}
+.monkeyform input{
+  font-size: 3em;
+}

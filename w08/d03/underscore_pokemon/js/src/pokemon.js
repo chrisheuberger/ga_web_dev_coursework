@@ -4,14 +4,13 @@ var pokemon = {
 
   printAllPokemonNamesToConsole : function(){
      // pokomenList.each do |monster|
-     //end
-
+     // end
     _.each(pokemon.pokemonList, function(monster){
       console.log(monster.name);
     })
   },
   findPokemonByName : function(name){
-    //look into _.find
+    // look into _.find
     var pokemonIWant = _.find(pokemon.pokemonList, function(monster){
       return monster.name == name;
     });
@@ -20,7 +19,7 @@ var pokemon = {
 
   findStrongestPokemon : function(){
     // look into _.max
-    //i.e. which monster has the strongest attack?
+    // i.e. which monster has the strongest attack?
     var strongest = _.max(pokemon.pokemonList, function(monster){
       return parseInt(monster.stats.attack);
     });
@@ -28,7 +27,7 @@ var pokemon = {
   },
 
   findPokemonByType : function(type){
-    //_.filter / _.contains
+    // _.filter / _.contains
     return _.filter(pokemon.pokemonList, function(monster){
       return _.contains(monster.type, type);
     });

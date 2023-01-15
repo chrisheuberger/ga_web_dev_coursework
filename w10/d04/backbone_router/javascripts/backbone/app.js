@@ -44,7 +44,6 @@ App.Views.ViewManager = Backbone.View.extend({
   }
 })
 
-
 App.Models.Shape = Backbone.Model.extend({});
 
 App.Collections.ShapeCollection = Backbone.Collection.extend({
@@ -92,14 +91,9 @@ App.Views.ShapeListView = Backbone.View.extend({
   }
 })
 
-
 function randomColor(){
   return '#'+Math.floor(Math.random()*16777215).toString(16);
 }
-
-// function randomColor(){
-//   return _.sample(["yellow", "red", "blue"]);
-// }
 
 function randomShape(){
   return _.sample(["square", "triangle", "circle"])
@@ -120,4 +114,3 @@ function seedCollection(numShapes, collection){
 $(function(){
   App.initialize();
 })
-

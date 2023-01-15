@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Morning Exercise</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+  <input id="input" type="text">
+  <h1 id="h1"></h1>
+  <script>
+    //when the page loads, do the stuff inside of this function.
+    $(function(){
+      $('#input').on('keyup', function(){
+        var text = ($(this).val());
+        $h1El = $('#h1');
+        $h1El.text(text);
+        // $($h1El).css('font-size', $($h1El).text().length+"px");
+        $   h1El.css('font-size', text.length+"px");
+      });
+      // this is how we can get text
+      //$('#h1').text();  //the return of .text() has a length attribute
+
+      // this is how we can set text
+      //$('#h1').text("some new text");
+
+
+      //this is how we can get the value of a text field
+      //$('#input').val();
+
+    });
+  </script>
+</body>
+</html>

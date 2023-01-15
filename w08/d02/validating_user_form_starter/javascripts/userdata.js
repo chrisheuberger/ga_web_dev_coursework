@@ -39,7 +39,6 @@ function validateEmail(email){
 };
 
 //Write a function so that when the clear button is clicked, any data being displayed is erased.
-
 function clearData(){
   $('#user_name').val('');
   $('#user_age').val('');
@@ -66,7 +65,7 @@ function display(){
 }
 
 $(document).ready(function(){
-  //Store the appropriate items you will be selecting from the DOM into variables for easy usage
+  // Store the appropriate items you will be selecting from the DOM into variables for easy usage
   var $add_user_data_form = $('#add_user_data');
   // Initially hide the errors. Check the HTML to see how to select all the items that are error messages.
   $('span').hide();
@@ -76,9 +75,9 @@ $(document).ready(function(){
     clearData();
   });
 
-  //set event handler
+  // Set event handler
   $add_user_data_form.submit(function(e){
-    //Get values from user inputs
+    // Get values from user inputs
     var name = $('#user_name').val();
     var age = $('#user_age').val();
     var phone = $('#user_ph').val();
@@ -87,9 +86,6 @@ $(document).ready(function(){
     if(validateName(name) && validateAge(age) && validatePhone(phone) && validateEmail(email)) {
       display();
     }
-    return false; //This stops the form from processing (page reload). An alternative to preventDefault();
-
+    return false; // This stops the form from processing (page reload). An alternative to preventDefault();
   });
-
 });
-

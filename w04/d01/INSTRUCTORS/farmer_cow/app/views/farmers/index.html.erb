@@ -1,0 +1,15 @@
+<h1>Farmers</h1>
+<ul>
+  <% @farmers.each do |farmer| %>
+    <li>
+      <%= farmer.name %>
+      <ul>
+        <% farmer.cows.each do |cow| %>
+          <li>
+            <%= cow.name %>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,29 @@
+body {
+  background-color: lightblue;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Fjalla One', sans-serif;
+  margin: 0px;
+}
+
+h2 {
+  font-family: 'Cantarell', sans-serif;
+  margin: 0px;
+}
+
+p {
+  font-family: 'Cantarell', sans-serif;
+}
+
+button {
+  border: 0px;
+  background-color: #F4F4F4;
+  border-radius: 25%;
+}
+
+

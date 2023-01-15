@@ -1,0 +1,21 @@
+
+<h2>Welcome</h2>
+
+<% if current_user %>
+  <p>
+    <%= current_user.email %> ... is great
+  </p>
+  <%= link_to "Log-Out", log_out_path, method: :delete %>
+<% else%>
+  <%= link_to "Log-In", log_in_path %>
+  <%= link_to "Sign-Up", users_new_path %>
+<% end %>
+
+
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= user.email %>
+    </li>
+  <% end %>
+</ul>

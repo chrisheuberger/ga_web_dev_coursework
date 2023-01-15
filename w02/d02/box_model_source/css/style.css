@@ -1,4 +1,3 @@
-
 *, body {
   margin: 0;
   padding: 0;
@@ -9,46 +8,45 @@ nav {
 }
 
 nav li {
-  background-color: blue;
   display: inline-block;
-  padding: 5px;
   margin: 5px;
+  padding: 5px;
   color: white;
+  background-color: blue;
 }
 
 .container {
-  background-color: lightgray;
   margin: 5px;
   padding: 5px;
+  background-color: lightgray;
 }
 
-.container .box{
-  height: 150px;
+.container .box {
   width: 150px;
-  border: 1px solid black;
+  height: 150px;
   margin: 5px;
-
+  border: 1px solid black;
 }
 
 .right {
   float: right;
 }
 
-.box.right{
+.box.right 
   background-color: pink;
 }
 
-.box.left{
-  background-color: chartreuse;
+.box.left {
   float: left;
+  background-color: chartreuse;
 }
 
-.container .center{
+.container .center {
   margin: 5px auto;
   /*margin: top right bottom left*/
 }
 
-.container.teale .box{
+.container.teal .box {
   background-color: teal;
 }
 

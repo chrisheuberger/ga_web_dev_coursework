@@ -1,0 +1,28 @@
+<h1><%= @user.username %></h1>
+
+<% @user.caws.each do |caw| %>
+  <p>
+    <%= caw.message %>
+    <form action="/users/<%= @user.id %>/caws/<%= caw.id %>" method='post'>
+      <input type="hidden" name='_method' value='delete'>
+      <button type='submit'>Delete</button>
+    </form>
+  </p>
+<% end %>
+
+<form action="/users/<%= @user.id %>/caws/new" method='get'>
+  <button type='submit'>Caw Time</button>
+</form>
+
+
+
+
+
+
+<!-- <a href="/users/<%= @user.id %>/caws/new">
+  <h2>
+    Caw Time
+  </h2>
+</a>
+ -->
+

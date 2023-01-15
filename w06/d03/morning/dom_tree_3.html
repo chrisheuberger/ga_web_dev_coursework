@@ -1,0 +1,206 @@
+<html>
+<head>
+  <title>WDI, meet DOM</title>
+</head>
+<body>
+ <input type="text" id="input">
+ <ul id="students"></ul>
+ <ul id="smileys"></ul>
+ <ul id="teachers">
+  <li class="teacher colorizable" id="aldric">Aldric</li>
+  <li class="teacher" id="andrew">Andrew</li>
+  <li class="teacher" id="matt">Matt</li>
+</ul>
+<div>
+  The Rails 4 Way
+  <span>Everything you ever wanted to know</span>
+  <span>About building an Enterprise Class Rails app</span>
+</div>
+<div class="colorizable">Secrets of the JavaScript Ninja</div>
+<div>Programming and Object Oriented Design in Ruby</div>
+
+<script>
+function filterByNodeType(num) {
+  var childNodes = document.body.childNodes;
+  for (var i = 0; i < childNodes.length; i++) {
+    if (childNodes[i].nodeType == num) {
+      console.log(childNodes[i])
+    }
+  }
+}
+
+function logChildNodes() {
+  var childNodes = document.body.childNodes;
+  for (var i = 0; i < childNodes.length; i++) {
+    console.log(childNodes[i])
+  }
+}
+
+function logChildren() {
+  var children = document.body.children;
+  for (var i = 0; i < children.length; i++) {
+    console.log(children[i])
+  }
+}
+
+function theGreat(ul) {
+  var childElementNodes = ul.children;
+  for (var i = 0; i < childElementNodes.length; i++) {
+    childElementNodes[i].innerHTML += "...the great"
+  }
+}
+
+function blueCircle(ul) {
+  var childElementNodes = ul.children;
+  for (var i = 0; i < childElementNodes.length; i++) {
+    childElementNodes[i].innerHTML = "<div style='background-color:blue; height:100px; width:100px; border-radius:50px'></div>";
+  }
+}
+
+function makeGroovy(ul) {
+  var childElementNodes = ul.children;
+  for (var i = 0; i < childElementNodes.length; i++) {
+   childElementNodes[i]
+ }; {
+  childElementNodes[i].setAttribute('groovy', true);
+}
+}
+
+function teacher(ul) {
+  var childElementNodes = ul.children;
+  for (var i = 0; i < childElementNodes.length; i++) {
+    childElementNodes[i].className = 'teacher';
+  }
+}
+
+function returnValue(input) {
+  var inputField = input.value;
+  console.log(inputField);
+}
+
+function changeTagFont(tagName, fontFamily) {
+  var tags = document.body.getElementsByTagName(tagName);
+  for (var i = 0; i < tags.length; i++) {
+    tags[i].style.fontFamily = fontFamily;
+  };
+}
+
+function colorize(color) {
+  var classColorize = document.body.getElementsByClassName('colorizable');
+  for (var i = 0; i < classColorize.length; i++) {
+    classColorize[i].style.backgroundColor = color;
+  };
+}
+
+function buildSquares(num, size) {
+  var array = [];
+  for (var i = 0; i < num; i++) {
+    var square = document.createElement('div');
+    square.style.height = size;
+    square.style.width = size;
+    array.push(square);
+  }
+  return array;
+}
+
+function buildSmileyFaces(num, size) {
+  var elems = [];
+  for (var i = 0; i < num; i++) {
+    var circle = document.createElement('div');
+    circle.style.width = size;
+    circle.style.height = size;
+    circle.style.borderRadius = size/2;
+    circle.style.backgroundColor = randomColor();
+    circle.style.fontSize = size/2;
+    var textNode = document.createTextNode('^_^');
+    circle.appendChild(textNode);
+    elems.push(circle);
+  }
+  return elems
+}
+
+function appendSmileysToDom(num, size) {
+  var smileys = buildSmileyFaces(num, size);
+  var ul = document.getElementById('smileys');
+  for (var i = 0; i < smileys.length; i++) {
+    ul.appendChild(smileys[i]);
+  }
+}
+
+function randomColor() {
+  var colors = ['red', 'yellow', 'green', 'lightgreen', 'lightblue', 'blue', 'orange', 'chartreuse', 'purple'];
+  var index = Math.floor(Math.random() * colors.length);
+  return colors[index];
+}
+
+var protos = [
+'Nessa Nguyen',
+'Jeff Winkler',
+'John Murphy',
+'Jeff Drakos',
+'Rebecca Strong',
+'Gardner Lonsberry' ,
+'Jonathan Gean',
+'Nathaniel Tuvera',
+'Tim Hannes',
+'Aziz Hasanov',
+'Chris Heuberger',
+'Dmitry Shamis' ,
+'Corey Leveen',
+'Paul Hiam',
+'Steven Doran',
+'Ben Karl',
+'Kristen Tonga',
+'Wake Lankard',
+'Carlos Pichardo' ,
+'Paul Gasberra',
+'Andrea Trapp',
+'Heidi Williams-Foy'
+]
+
+function createLiNodes(array) {
+  var arr = []
+  for (i = 0; i < protos.length; i++) {
+    var li = document.createElement('li');
+    var textNode = document.createTextNode(protos[i]);
+    li.appendChild(textNode);
+    arr.push(li)
+  }
+  return arr;
+}
+
+function prependLiNodes(array) {
+  var li = createLiNodes(array);
+  var ul = document.getElementById('students')
+  for (var i = 0; i < li.length; i++) {
+    ul.insertBefore(li[i], li[i-1])
+  }
+}
+
+function findTeacher(teacherName) {
+  var teachersUl = document.getElementById('teachers');
+  var teachersLis = teachersUl.getElementsByTagName('li');
+  for (var i = 0; i < teachersLis.length; i++) {
+    if (teachersLis[i].innerHTML.replace(/ /g, '') == teacherName) {
+      return teachersLis[i];
+    }
+  }
+}
+
+function removeTeacher(teacherName) {
+  var teacher = findTeacher(teacherName);
+  var teachersUl = document.getElementById('teachers');
+  teachersUl.removeChild(teacher);
+}
+
+function replaceTeacher(newTeacherName, oldTeacherName) {
+  var newTeacherLi = document.createElement('li');
+  newTeacherLi.innerHTML = newTeacherName;
+  var oldTeacherLi = findTeacher(oldTeacherName);
+  var teachersUl = document.getElementById('teachers');
+  teachersUl.replaceChild(newTeacherLi, oldTeacherLi);
+}
+
+</script>
+</body>
+</html>

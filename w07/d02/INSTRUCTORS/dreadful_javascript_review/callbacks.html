@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assert Template</title>
+  <script>
+    function assert(bool, desc){
+      var text = document.createTextNode(desc);
+      var li   = document.createElement('li');
+      li.appendChild(text);
+      li.className = bool ? "pass" : "fail";
+      var results = document.getElementById('results');
+      results.appendChild(li);
+    }
+  </script>
+  <style>
+    body {font-family: Courier new;}
+    #results li.pass{color: chartreuse;}
+    #results li.fail{color: red;}
+  </style>
+</head>
+<body>
+  <ul id="results"></ul>
+  <script>
+    function simple(callback){return callback();}
+    function twoPlusTwo(){return 2+2;}
+    assert(simple(twoPlusTwo)=== 4, "We know what a callback is");
+
+    function doSomethingToN(n, callback){
+      return callback(n);
+    }
+
+    // write a callback that returns the square of n.
+    function square(n){
+      return n*n;
+    }
+    assert(doSomethingToN(4, square) === 16, 'Our callback is working.');
+
+    // write a callback that returns the factorial of n.
+    function factorial(n){
+      if (n <= 1){
+        return 1;
+      }
+      return n * factorial(n-1);
+    }
+    assert(doSomethingToN(5, factorial) === 120, "We have a working factorial");
+
+    function nTimes(n){
+      return function(m){return m*n;}
+    }
+
+    var nTimes4 = nTimes(4);
+    assert(doSomethingToN(5, nTimes4) === 20, "we'll come back to this")
+
+  </script>
+</body>
+</html>

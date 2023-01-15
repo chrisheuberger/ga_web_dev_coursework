@@ -1,0 +1,15 @@
+
+<h2>Be a user</h2>
+
+<form action="/users" method='post'>
+  <%= token_tag %>
+  <input type="text" name='user[username]'>
+  <input type="submit">
+</form>
+
+
+<!-- What will Rack see? -->
+<!-- params will be { :user => {:username => 'Lichard'} } -->
+
+
+

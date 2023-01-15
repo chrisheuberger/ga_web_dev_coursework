@@ -1,16 +1,27 @@
+var signInApp = {
+  Person: function(name) {
+    this.name = name;
+    this.el = undefined
+  },
 
-function Person (name) {
-  this.name = name;
-  this.el = $('<li>').html(this.name);
+  createPerson: function(name) {
+    var person = new this.Person(name);
+    var nameList = $('.name-list')
+    person.render();
+    nameList.append(person.el)
+  }
 }
 
+signInApp.Person.prototype.render = function render() {
+  var liEl = $('<li>').html(this.name);
+  this.el = liEl
+  return this
+}
 
-$(function(){
-  $('.submit-button').on('click', function() {
-    var text = ($(this).val());
-    var thePerson = new Person($('.text-input').val());
-    $('.name-li').append(thePerson.el);
-    });
-});
-
-
+$(function () {
+  $('.name-form').on('submit', function(e) {
+    e.preventDefault();
+    var name = $('.name-input').val();
+    signInApp.createPerson(name);
+  })
+})

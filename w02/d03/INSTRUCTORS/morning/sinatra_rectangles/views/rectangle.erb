@@ -1,0 +1,6 @@
+<!-- you are going to need inline styles -->
+
+<% @rectangles.each do |rectangle| %>
+
+  <div style="float: left;width: <%= rectangle[:width] %>; height: <%= rectangle[:height] %>; background-color: <%= rectangle[:color] %>"></div>
+<% end %>

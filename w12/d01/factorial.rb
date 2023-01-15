@@ -1,9 +1,9 @@
 def factorial(n)
-    return n  if n <= 2
-    return n * factorial(n-1)
+  return n  if n <= 2
+  return n * factorial(n-1)
 end
 
-# factorial(7)
+factorial(7)
   n = 7
   return = 7 * factorial(6) = 5040
 factorial(6)

@@ -1,0 +1,10 @@
+<h1>GIMME INFO ON STUDENT</h1>
+<h2><%= @student.name %></h2>
+
+<div class="check-ins">
+  <% @check_ins.each do |check_in| %>
+  <div class="check-in">
+    <%= check_in.time.to_s(:db) %>
+  </div>
+  <% end %>
+</div>

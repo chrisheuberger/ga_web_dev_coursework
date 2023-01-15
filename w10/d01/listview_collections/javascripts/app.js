@@ -1,9 +1,12 @@
+// Ingredient Model
 var Ingredient = Backbone.Model.extend({});
 
+// Ingredient Collection
 var IngredientCollection = Backbone.Collection.extend({
   model: Ingredient
 });
 
+// Ingredient Model View
 var IngredientView = Backbone.View.extend({
   tagName: 'li',
   template: _.template($('#ingredient-template').html()),
@@ -13,6 +16,7 @@ var IngredientView = Backbone.View.extend({
   }
 })
 
+// Ingredient Collection View
 var IngredientListView = Backbone.View.extend({
   initialize: function(){
     this.listenTo(this.collection, 'add', this.render);
@@ -30,14 +34,17 @@ var IngredientListView = Backbone.View.extend({
 })
 
 // IngredientCollection will be an attribute of Juice Model
+// Juice Model constructor function
 var Juice = Backbone.Model.extend({});
 
 // Juice Model will be bounded by JuiceCollection
+// Juice Model collection function
 var JuiceCollection = Backbone.Collection.extend({
   model: Juice
 });
 
 // JuiceView is a div with name in an h1 and ingredient collection as list inside it
+// Juice Model view
 JuiceView = Backbone.View.extend({
   tagName: 'li',
   template: _.template($('#juice-template').html()),
@@ -60,28 +67,25 @@ JuiceListView = Backbone.View.extend({
       that.$el.append(juiceView.render().el);
     });
     return this;
-  // renderJuice: function(model){
-  //   model.view = new JuiceView({model: model});
-  //   this.$el.prepend(model.view.render().el);
-  // }
 }
 })
 
-// new JuiceView({el: $('#juice'), model: new Juice({name: 'detox', ingredients: 'test'}) }).render().el
-
 $(function(){
   var ingredients = new IngredientCollection();
+
+  ingredients.on('add', function(){console.log('something was added')});
+  ingredients.on('remove', function(){console.log('something was removed')});
+
   var strawberry = new Ingredient({name: 'strawberry', amount: 13});
-  // ingredients.on('add', function(){console.log("something was added")});
   ingredients.add(strawberry);
-  // ingredients.on('remove', function(){console.log("insuffient micronutrient content")});
-  // ingredients.remove(strawberry);
   var cabbage = new Ingredient({name: 'cabbage', amount: 1});
   ingredients.add(cabbage);
+
   var listView = new IngredientListView({
     collection: ingredients,
     el: $('#ingredient-list')
   });
+  
   var turmeric = new Ingredient({name: 'turmeric', amount: 30});
   listView.collection.add(turmeric);
   listView.collection.remove(turmeric);

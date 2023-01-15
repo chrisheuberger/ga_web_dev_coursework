@@ -1,0 +1,16 @@
+<form action="/squares/<%= @square.id %>" method="post">
+  <%= token_tag %>
+  <input type="hidden" name="_method" value="put">
+  <p>
+      <input type="text" name="square[color]" value="<%=@square.color%>">
+  </p>
+  <p>
+      <input type="text" name="square[border_radius]" value="<%=@square.border_radius%>">
+  </p>
+  <p>
+      <input type="text" name="square[side_length]" value="<%=@square.side_length%>">
+  </p>
+  <p>
+      <input type="submit">
+  </p>
+</form>

@@ -1,0 +1,25 @@
+<h3>Here are your movies</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Director</th>
+      <th>Screenwriter</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td>
+          <a href="/movies/<%= movie.id %>">
+            <%= movie.title %>
+          </a>
+        </td>
+        <td><%= movie.director %></td>
+        <td><%= movie.screenwriter %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

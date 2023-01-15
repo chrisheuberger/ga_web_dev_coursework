@@ -1,0 +1,9 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'bourbon'
+gem 'sass'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-instagram'
